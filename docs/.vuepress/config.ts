@@ -7,7 +7,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { defaultTheme } from '@panzhiyue/vuepress-theme-knowledge'
 import { path } from '@vuepress/utils'
-import { head, navbarEn, navbarZh, sidebarEn, sidebarZh } from './configs'
+import { navbar, sidebar } from './configs'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -15,20 +15,15 @@ export default defineUserConfig({
   // set site base to default value
   base: '/',
 
-  // extra tags in `<head>`
-  head,
+  // // extra tags in `<head>`
+  // head,
 
   // site-level locales config
   locales: {
     '/': {
-      lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator',
-    },
-    '/zh/': {
       lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器',
+      title: 'vuepress-theme-knowledge',
+      description: 'vuepress的一个主题',
     },
   },
 
@@ -41,57 +36,32 @@ export default defineUserConfig({
     logo: '/images/hero.png',
     repo: 'vuepress/vuepress-next',
     docsDir: 'docs',
-
-    // theme-level locales config
-    locales: {
-      /**
-       * English locale config
-       *
-       * As the default locale of @panzhiyue/vuepress-theme-knowledge is English,
-       * we don't need to set all of the locale fields
-       */
-      '/': {
-        // navbar
-        navbar: navbarEn,
-        // sidebar
-        sidebar: sidebarEn,
-        // page meta
-        editLinkText: 'Edit this page on GitHub',
-      },
-
-      /**
-       * Chinese locale config
-       */
-      '/zh/': {
-        // navbar
-        navbar: navbarZh,
-        selectLanguageName: '简体中文',
-        selectLanguageText: '选择语言',
-        selectLanguageAriaLabel: '选择语言',
-        // sidebar
-        sidebar: sidebarZh,
-        // page meta
-        editLinkText: '在 GitHub 上编辑此页',
-        lastUpdatedText: '上次更新',
-        contributorsText: '贡献者',
-        // custom containers
-        tip: '提示',
-        warning: '注意',
-        danger: '警告',
-        // 404 page
-        notFound: [
-          '这里什么都没有',
-          '我们怎么到这来了？',
-          '这是一个 404 页面',
-          '看起来我们进入了错误的链接',
-        ],
-        backToHome: '返回首页',
-        // a11y
-        openInNewWindow: '在新窗口打开',
-        toggleDarkMode: '切换夜间模式',
-        toggleSidebar: '切换侧边栏',
-      },
-    },
+    navbar,
+    selectLanguageName: '简体中文',
+    selectLanguageText: '选择语言',
+    selectLanguageAriaLabel: '选择语言',
+    // sidebar
+    sidebar,
+    // page meta
+    editLinkText: '在 GitHub 上编辑此页',
+    lastUpdatedText: '上次更新',
+    contributorsText: '贡献者',
+    // custom containers
+    tip: '提示',
+    warning: '注意',
+    danger: '警告',
+    // 404 page
+    notFound: [
+      '这里什么都没有',
+      '我们怎么到这来了？',
+      '这是一个 404 页面',
+      '看起来我们进入了错误的链接',
+    ],
+    backToHome: '返回首页',
+    // a11y
+    openInNewWindow: '在新窗口打开',
+    toggleDarkMode: '切换夜间模式',
+    toggleSidebar: '切换侧边栏',
 
     themePlugins: {
       // only enable git plugin in production mode
@@ -122,7 +92,7 @@ export default defineUserConfig({
         facetFilters: ['tags:v2'],
       },
       locales: {
-        '/zh/': {
+        '/': {
           placeholder: '搜索文档',
           translations: {
             button: {
