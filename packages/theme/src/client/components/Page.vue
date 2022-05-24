@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import PageMeta from '@theme/PageMeta.vue'
-import PageNav from '@theme/PageNav.vue'
+import PageMeta from "@theme/PageMeta.vue";
+import PageNav from "@theme/PageNav.vue";
+
+
 </script>
 
 <template>
@@ -18,7 +20,7 @@ import PageNav from '@theme/PageNav.vue'
     <PageMeta />
 
     <PageNav />
-
+    
     <slot name="bottom" />
   </main>
 </template>

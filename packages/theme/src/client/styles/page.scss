@@ -69,8 +69,10 @@
       content: '←';
     }
   }
+
   .next {
     float: right;
+
     a:after {
       content: '→';
     }
