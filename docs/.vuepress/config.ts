@@ -40,6 +40,7 @@ export default defineUserConfig({
     selectLanguageName: '简体中文',
     selectLanguageText: '选择语言',
     selectLanguageAriaLabel: '选择语言',
+    sidebarDepth: 5, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     // sidebar
     sidebar,
     // page meta

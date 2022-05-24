@@ -59,7 +59,6 @@ export const resolveSidebarItems = (
   // get sidebar config from frontmatter > theme data
   const sidebarConfig = frontmatter.sidebar ?? themeLocale.sidebar ?? 'auto'
   const sidebarDepth = frontmatter.sidebarDepth ?? themeLocale.sidebarDepth ?? 2
-
   // resolve sidebar items according to the config
   if (frontmatter.home || sidebarConfig === false) {
     return []
@@ -170,9 +169,9 @@ export const resolveMultiSidebarItems = (
   sidebarConfig: SidebarConfigObject,
   sidebarDepth: number
 ): ResolvedSidebarItem[] => {
-  const route = useRoute()
-  const sidebarPath = resolveLocalePath(sidebarConfig, route.path)
-  const matchedSidebarConfig = sidebarConfig[sidebarPath] ?? []
 
+  const route = useRoute()
+  const sidebarPath = resolveLocalePath(sidebarConfig, decodeURI(route.path))
+  const matchedSidebarConfig = sidebarConfig[sidebarPath] ?? []
   return resolveArraySidebarItems(matchedSidebarConfig, sidebarDepth)
 }

@@ -1,9 +1,11 @@
 import type { SidebarConfig } from '@panzhiyue/vuepress-theme-knowledge'
 export const sidebar: SidebarConfig = {
-    '/web/': [
+    '/《ArcGIS Python编程案例》/': [
         {
-            text: '前端',
+            text: 'ArcGIS Python编程案例',
             children: [
+                '/0.前言.md',
+                '/1.Python语言基础.md'
                 // '/zh/guide/README.md',
                 // '/zh/guide/getting-started.md',
                 // '/zh/guide/configuration.md',
