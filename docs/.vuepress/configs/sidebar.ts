@@ -9,5 +9,12 @@ export const sidebar: SidebarConfig = {
     '/openlayers/': resolveDir(resolve(__dirname, "../../openlayers/")),
     '/SuperMap/': resolveDir(resolve(__dirname, "../../SuperMap/")),
     '/第三方地图/': resolveDir(resolve(__dirname, "../../第三方地图/")),
+    '/nodejs/': resolveDir(resolve(__dirname, "../../nodejs/")),
+    '/windows/': resolveDir(resolve(__dirname, "../../windows/")),
+    '/css/': resolveDir(resolve(__dirname, "../../css/")),
+    '/mongodb/': resolveDir(resolve(__dirname, "../../mongodb/")),
+    '/mysql/': resolveDir(resolve(__dirname, "../../mysql/")),
+    '/sqlserver/': resolveDir(resolve(__dirname, "../../sqlserver/")),
+    '/vue/': resolveDir(resolve(__dirname, "../../vue/")),
 }
 
