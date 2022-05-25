@@ -6,20 +6,27 @@ export const navbar: NavbarConfig = [
         children: [
             {
                 text: 'ArcGIS',
-                children: [
-                    {
-                        text: '《ArcGIS Python编程案例》',
-                        link: '/《ArcGIS Python编程案例》/0.前言.md'
-                    }
-                    // '/zh/reference/cli.md',
-                    // '/zh/reference/config.md',
-                    // '/zh/reference/frontmatter.md',
-                    // '/zh/reference/components.md',
-                    // '/zh/reference/plugin-api.md',
-                    // '/zh/reference/theme-api.md',
-                    // '/zh/reference/client-api.md',
-                    // '/zh/reference/node-api.md',
-                ],
+                link: '/ArcGIS/'
+            },
+            {
+                text: 'eCognition',
+                link: '/eCognition/'
+            },
+            {
+                text: 'SuperMap',
+                link: '/SuperMap/'
+            },
+            {
+                text: 'leaflet',
+                link: '/leaflet/'
+            },
+            {
+                text: 'openlayers',
+                link: '/openlayers/'
+            },
+            {
+                text: '第三方地图',
+                link: '/第三方地图/'
             },
         ],
     }
