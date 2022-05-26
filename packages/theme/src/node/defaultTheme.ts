@@ -159,6 +159,7 @@ export const defaultTheme = ({
 
       // @vuepress/plugin-theme-data
       themeDataPlugin({ themeData: localeOptions }),
+
     ],
   }
 }

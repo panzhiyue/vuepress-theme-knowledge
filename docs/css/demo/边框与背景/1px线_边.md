@@ -5,13 +5,13 @@
 
 
 ::: demo
-边框与背景/1px线_边/basic
+css/examples/边框与背景/1px线_边/basic
 :::
 
 ::: demo
-边框与背景/1px线_边/basic2
+css/examples/边框与背景/1px线_边/basic2
 :::
 
 ::: demo 渐变色
-边框与背景/1px线_边/basic3
+css/examples/边框与背景/1px线_边/basic3
 :::

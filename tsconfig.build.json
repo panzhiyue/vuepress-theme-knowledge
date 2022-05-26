@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.base.json",
+    "references": [
+      { "path": "./packages/plugins/demo-block/tsconfig.build.json" },
+      { "path": "./packages/theme/tsconfig.build.json" },
+   
+    ],
+    "files": []
+  }
+  

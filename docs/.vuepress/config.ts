@@ -8,6 +8,7 @@ import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { defaultTheme } from '@panzhiyue/vuepress-theme-knowledge'
 import { path } from '@vuepress/utils'
 import { navbar, sidebar } from './configs'
+import demoBloclPlugin from '@panzhiyue/vuepress-plugin-demo-block'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -70,19 +71,11 @@ export default defineUserConfig({
       // use shiki plugin in production mode instead
       prismjs: !isProd,
     },
+    
   }),
-
   // configure markdown
   markdown: {
-    importCode: {
-      handleImportPath: (str) =>
-        str.replace(
-          /^@vuepress/,
-          path.resolve(__dirname, '../../packages/@vuepress')
-        ),
-    },
   },
-
   // use plugins
   plugins: [
     docsearchPlugin({
@@ -145,5 +138,10 @@ export default defineUserConfig({
     }),
     // only enable shiki plugin in production mode
     isProd ? shikiPlugin({ theme: 'dark-plus' }) : [],
+    demoBloclPlugin({
+      componentsDir:"./",
+      lang:"zh-CN"
+
+    })
   ],
 })

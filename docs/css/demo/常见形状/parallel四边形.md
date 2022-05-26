@@ -5,6 +5,6 @@
 
 
 ::: demo
-常见形状/parallel四边形/basic
+css/examples/常见形状/parallel四边形/basic
 :::
 

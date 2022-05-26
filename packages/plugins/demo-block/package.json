@@ -1,0 +1,43 @@
+{
+    "name": "@panzhiyue/vuepress-plugin-demo-block",
+    "version": "1.0.0-beta.3",
+    "description": "Vuepress2.x示例块插件",
+    "keywords": [
+        "vuepress-plugin",
+        "vuepress",
+        "plugin"
+    ],
+    "homepage": "https://panzhiyue.github.io/vuepress-theme-pzy",
+    "bugs": {
+        "url": "https://github.com/panzhiyue/vuepress-theme-pzy/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/panzhiyue/vuepress-theme-pzy.git"
+    },
+    "license": "MIT",
+    "author": "panzhiyue",
+    "main": "lib/node/index.js",
+    "types": "lib/node/index.d.ts",
+    "files": [
+        "lib",
+        "templates"
+    ],
+    "scripts": {
+        "build": "tsc -b tsconfig.build.json",
+        "clean": "rimraf lib *.tsbuildinfo",
+        "copy": "cpx \"src/**/*.{d.ts,vue,scss,js,json}\" lib"
+    },
+    "dependencies": {
+        "@vuepress/core": "2.0.0-beta.45",
+        "@vuepress/utils": "2.0.0-beta.45",
+        "ts-debounce": "^4.0.0",
+        "vue": "^3.2.33",
+        "markdown-it": "^12.3.2",
+        "markdown-it-container": "^3.0.0",
+        "escape-html": "1.0.3"
+    },
+    "publishConfig": {
+      "access": "public"
+    }
+}

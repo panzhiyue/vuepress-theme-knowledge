@@ -16,7 +16,7 @@
     "url": "git+https://github.com/panzhiyue/vuepress-theme-pzy.git"
   },
   "license": "MIT",
-  "author": "meteorlxy",
+  "author": "panzhiyue",
   "main": "lib/node/index.js",
   "types": "lib/node/index.d.ts",
   "files": [
@@ -50,6 +50,7 @@
     "vue-router": "^4.0.15",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
+    
   },
   "peerDependencies": {
     "sass-loader": "^13.0.0"
