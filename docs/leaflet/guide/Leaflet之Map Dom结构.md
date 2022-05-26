@@ -9,9 +9,7 @@
 
 下面先给个Dom截图与思维导图
 
-![img](Leaflet%E4%B9%8BMap%20Dom%E7%BB%93%E6%9E%84/20210804101126729.png)![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
 
- ![img](Leaflet%E4%B9%8BMap%20Dom%E7%BB%93%E6%9E%84/20210804101155549.png)![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
 
  地图首先是一个Div，下面包含了2个子Div，分别原来存放图层与控件
 

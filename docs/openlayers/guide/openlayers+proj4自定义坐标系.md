@@ -26,8 +26,6 @@ https://www.jianshu.com/p/9eca1bc8a12d
 每个坐标系都是有一个EPSG定义，本文准备以EPSG:3395举例。
 首先在http://epsg.io/网站，查找坐标系定义。
 
-![自定义坐标系](C:/images/pasted-63.png)
-
 
 ![自定义坐标系](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202203201547161.png)
 

@@ -57,7 +57,7 @@ collection.Find(Builders<BsonDocument>.Filter.Empty);
 
 上述表示无条件查询, matches everything.
 
-如果有条件的话, 可以从Builders<BsonDocument>.Filter中选择, 比如Eq为相等, Lt为小于, Gt大于...顾名思义. 基于VS强大的智能提示, 非常清晰.
+如果有条件的话, 可以从Builders`<BsonDocument>`.Filter中选择, 比如Eq为相等, Lt为小于, Gt大于...顾名思义. 基于VS强大的智能提示, 非常清晰.
 
 举例条件查询:
 
@@ -73,7 +73,7 @@ collection.Find(Builders<BsonDocument>.Filter.Eq("name", "测试数据1") & Buil
 collection.UpdateMany(Builders<BsonDocument>.Filter.Eq("name", "测试数据1"), Builders<BsonDocument>.Update.Set("number", 6));
 ```
 
-更新使用UpdateMany(), 同样支持条件从Builders<BsonDocument>.Filter中获取.
+更新使用UpdateMany(), 同样支持条件从Builders`<BsonDocument>`.Filter中获取.
 
 更新支持添加新的field, 如:
 
@@ -99,7 +99,7 @@ collection.DeleteMany()
 
 ## 2> BsonDocument到自定义类型[#](https://www.cnblogs.com/pasoraku/p/9634946.html#4019037081)
 
-　　通常是在Find的时候吧, IFindFluent.As<TEntity>()转就可以了. 
+　　通常是在Find的时候吧,` IFindFluent.As<TEntity>()`转就可以了. 
 
 
 

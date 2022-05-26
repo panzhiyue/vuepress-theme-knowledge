@@ -15,7 +15,7 @@ const isProd = process.env.NODE_ENV === 'production'
 export default defineUserConfig({
   // set site base to default value
   base: '/',
-
+  dest: '../dist',
   // // extra tags in `<head>`
   // head,
 
@@ -71,7 +71,7 @@ export default defineUserConfig({
       // use shiki plugin in production mode instead
       prismjs: !isProd,
     },
-    
+
   }),
   // configure markdown
   markdown: {
@@ -139,8 +139,8 @@ export default defineUserConfig({
     // // only enable shiki plugin in production mode
     // isProd ? shikiPlugin({ theme: 'dark-plus' }) : [],
     demoBloclPlugin({
-      componentsDir:"./",
-      lang:"zh-CN"
+      componentsDir: "./",
+      lang: "zh-CN"
 
     })
   ],

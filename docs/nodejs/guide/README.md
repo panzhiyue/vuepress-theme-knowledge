@@ -1315,11 +1315,11 @@ package.json 文件创建有两种方式，手动创建或者自动创建。
 
 ### classic 模块策略：
 
-![img](tsconfig.json%E8%AF%A6%E8%A7%A3/202112291119894-16492328685893.png)
+
 
 ### node 模块策略：
 
-![img](tsconfig.json%E8%AF%A6%E8%A7%A3/202112291119092-16492328685905.png)
+
 
 
 

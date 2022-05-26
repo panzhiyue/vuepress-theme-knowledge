@@ -6,7 +6,6 @@ import { useSidebarItems } from '../composables'
 
 const route = useRoute()
 const sidebarItems = useSidebarItems()
-console.log(sidebarItems);
 onMounted(() => {
   watch(
     () => route.hash,

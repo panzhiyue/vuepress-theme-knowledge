@@ -17,6 +17,7 @@
     "docs:dev": "pnpm --filter=docs docs:dev",
     "docs:release": "pnpm build && pnpm docs:build",
     "docs:serve": "pnpm --filter=docs docs:serve",
+    "docs:deploy": "node ./scripts/deploydocs.js",
     "lint": "eslint --ext .js,.ts,.vue .",
     "prepare": "husky install",
     "release": "pnpm release:check && pnpm release:version && pnpm release:publish",

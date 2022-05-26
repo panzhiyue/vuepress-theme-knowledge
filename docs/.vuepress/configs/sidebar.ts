@@ -1,7 +1,6 @@
 import { resolveDir } from "./useSidebar"
 import { resolve } from "path"
 import type { SidebarConfig } from '@panzhiyue/vuepress-theme-knowledge'
-console.log(resolveDir(resolve(__dirname, "../../ArcGIS/")));
 export const sidebar: SidebarConfig = {
     '/ArcGIS/': resolveDir(resolve(__dirname, "../../ArcGIS/")),
     '/eCognition/': resolveDir(resolve(__dirname, "../../eCognition/")),
