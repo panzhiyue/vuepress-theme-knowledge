@@ -35,7 +35,7 @@ export default defineUserConfig({
   // configure default theme
   theme: defaultTheme({
     logo: '/images/hero.png',
-    repo: 'vuepress/vuepress-next',
+    repo: 'panzhiyue/vuepress-theme-knowledge',
     docsDir: 'docs',
     navbar,
     selectLanguageName: '简体中文',
