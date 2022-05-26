@@ -2,8 +2,16 @@ import type { NavbarConfig } from '@panzhiyue/vuepress-theme-knowledge'
 
 export const navbar: NavbarConfig = [
     {
+        text: '编程',
+        link:'/编程/'
+    },
+    {
         text: 'gis',
         children: [
+            {
+                text: 'gis',
+                link: '/gis/'
+            },
             {
                 text: 'ArcGIS',
                 link: '/ArcGIS/'
@@ -66,6 +74,10 @@ export const navbar: NavbarConfig = [
             {
                 text: 'sqlserver',
                 link: '/sqlserver/'
+            },
+            {
+                text: 'PostgreSql',
+                link: '/PostgreSql/'
             },
         ],
     },

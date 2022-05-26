@@ -32,10 +32,11 @@ function toSidebarOption(tree = []) {
  * @param {string} srcPath 自定义文件夹路径,必须在docs文件夹下
  * @returns {object[]}
  */
-export const resolveDir = (path: string) => {
+export const resolveDir = (path: string, exclude: Array = []) => {
     const srcDir = dirTree(path, {
         extensions: /\.md$/,
         normalizePath: true,
+        exclude
     });
     return toSidebarOption(srcDir.children);
 }
