@@ -2812,7 +2812,7 @@ SQL语句和表名都能对上,为什么提示不存在呢,仔细观察发现在
 
 这是表名大写生成的SQL语句
 
-![img](https://gitee.com/panzhiyue/picgo-image/raw/master/img/202201040038433.jpg) 
+![img](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202201040038433.jpg) 
 
 通过比较我们发现当表名大写是需要用双引号
 

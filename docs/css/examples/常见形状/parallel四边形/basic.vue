@@ -1,4 +1,4 @@
-<style>
+<style scoped>
   main{
     width: 100%;
     padding: 29px 0 0;

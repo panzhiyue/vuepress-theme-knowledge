@@ -7,13 +7,13 @@
         "vuepress",
         "plugin"
     ],
-    "homepage": "https://panzhiyue.github.io/vuepress-theme-pzy",
+    "homepage": "https://panzhiyue.github.io/vuepress-theme-knowledge",
     "bugs": {
-        "url": "https://github.com/panzhiyue/vuepress-theme-pzy/issues"
+        "url": "https://github.com/panzhiyue/vuepress-theme-knowledge/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/panzhiyue/vuepress-theme-pzy.git"
+        "url": "git+https://github.com/panzhiyue/vuepress-theme-knowledge.git"
     },
     "license": "MIT",
     "author": "panzhiyue",
