@@ -18,5 +18,6 @@ export const sidebar: SidebarConfig = {
     '/PostgreSql/': resolveDir(resolve(__dirname, "../../PostgreSql/")),
     '/编程/': resolveDir(resolve(__dirname, "../../编程/")),
     '/gis/': resolveDir(resolve(__dirname, "../../gis/")),
+    '/软件/': resolveDir(resolve(__dirname, "../../软件/")),
 }
 

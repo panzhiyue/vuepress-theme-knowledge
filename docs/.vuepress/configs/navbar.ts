@@ -89,6 +89,11 @@ export const navbar: NavbarConfig = [
                 link: '/vue/'
             },
         ],
+    },
+    {
+        text: '软件',
+        link: '/软件/'
+        
     }
 
 ]
