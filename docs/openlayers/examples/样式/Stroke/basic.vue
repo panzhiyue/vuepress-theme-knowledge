@@ -6,10 +6,10 @@ import {
   Vue2olLayerVector,
   Vue2olSourceVector,
   Vue2olFeature,
-  Vue2olGeomPolygon,
+  Vue2olGeomLinestring,
 } from "@gis-js/vue2ol";
 import { Vue2olSourceTdt } from "@gis-js/vue2ol-extend";
-import { Style, Fill } from "ol/style";
+import { Style, Stroke } from "ol/style";
 export default {
   components: {
     Vue2olMap,
@@ -19,7 +19,7 @@ export default {
     Vue2olLayerVector,
     Vue2olSourceVector,
     Vue2olFeature,
-    Vue2olGeomPolygon,
+    Vue2olGeomLinestring,
   },
   data() {
     return {
@@ -32,17 +32,15 @@ export default {
         projection: "EPSG:4326", //坐标系
       },
       coordinates: [
-        [
-          [120, 28],
-          [121, 28],
-          [121, 27],
-          [120, 27],
-          [120, 28],
-        ],
+        [120, 28],
+        [120, 29],
+        [119.5, 29],
       ],
+
       style: new Style({
-        fill: new Fill({
+        stroke: new Stroke({
           color: "rgba(255,0,0,0.5)",
+          width: 3,
         }),
       }),
     };
@@ -64,8 +62,8 @@ export default {
     <vue2ol-layer-vector>
       <vue2ol-source-vector>
         <vue2ol-feature :style-obj="style">
-          <vue2ol-geom-polygon :coordinates="coordinates">
-          </vue2ol-geom-polygon>
+          <vue2ol-geom-linestring :coordinates="coordinates">
+          </vue2ol-geom-linestring>
         </vue2ol-feature>
       </vue2ol-source-vector>
     </vue2ol-layer-vector>

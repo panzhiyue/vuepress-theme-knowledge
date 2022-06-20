@@ -23,6 +23,7 @@
     "@vuepress/utils": "2.0.0-beta.45",
     "dayjs": "^1.11.2",
     "object-assign": "^4.1.1",
+    "ol": "^6.14.1",
     "sass-loader": "^13.0.0",
     "serve": "^13.0.2",
     "vue": "^3.2.35"
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@gis-js/vue2ol": "1.0.0-alpha.17",
     "@gis-js/vue2ol-extend": "1.0.0-alpha.17",
+    "json-loader": "^0.5.7",
     "less": "^2.7.2",
     "less-loader": "^4.0.5"
   }

@@ -47,6 +47,10 @@ export default defineUserConfig({
                   fullySpecified: false,
                 },
               },
+              {
+                test: /\.json$/,
+                use: "json-loader"
+              },
             ]
           }
         }
