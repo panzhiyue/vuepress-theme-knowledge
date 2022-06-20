@@ -19,5 +19,6 @@ export const sidebar: SidebarConfig = {
     '/编程/': resolveDir(resolve(__dirname, "../../编程/")),
     '/gis/': resolveDir(resolve(__dirname, "../../gis/")),
     '/软件/': resolveDir(resolve(__dirname, "../../软件/")),
+    '/java/': resolveDir(resolve(__dirname, "../../java/")),
 }
 

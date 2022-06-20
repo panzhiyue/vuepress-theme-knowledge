@@ -28,6 +28,6 @@
 
 ![img](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202205271014422.jpeg) 
 
-我们将”<user username="admin" password="1234" roles="manager-gui"/>“添加到上图中的相应位置，具体如下图：
+我们将”`<user username="admin" password="1234" roles="manager-gui"/>`“添加到上图中的相应位置，具体如下图：
 
 ![img](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202205271014402.jpeg)

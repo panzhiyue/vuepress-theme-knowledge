@@ -9,7 +9,7 @@
     font: 150%/1.6 Baskerville, Palatino, serif;
   }
   main, main > div::before {
-    background: url("../../assets/images/city-night.jpg") fixed 0 / cover;
+    background: url("./city-night.jpg") fixed 0 / cover;
   }
   main > div::before{
     content: "";

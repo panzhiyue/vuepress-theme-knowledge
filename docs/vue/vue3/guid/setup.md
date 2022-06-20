@@ -29,10 +29,14 @@
 
 **定义**
 
+```
+
 <script setup>
     import {defineEmits} from "vue"
 	let emits=defineEmits(["change"])
 </script>
+```
+
 
 
 

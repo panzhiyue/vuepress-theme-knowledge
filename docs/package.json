@@ -5,9 +5,12 @@
     "docs:build": "vuepress-cli build --clean-cache",
     "docs:clean": "rimraf .vuepress/.temp .vuepress/.cache .vuepress/dist",
     "docs:dev": "vuepress-cli dev --clean-cache",
-    "docs:serve": "serve .vuepress/dist"
+    "docs:serve": "vuepress-cli serve --clean-cache"
   },
   "dependencies": {
+    "@panzhiyue/vuepress-plugin-demo-block": "workspace:*",
+    "@panzhiyue/vuepress-theme-knowledge": "workspace:*",
+    "@turf/turf": "^6.5.0",
     "@vuepress/bundler-vite": "2.0.0-beta.45",
     "@vuepress/bundler-webpack": "2.0.0-beta.45",
     "@vuepress/cli": "2.0.0-beta.45",
@@ -17,14 +20,16 @@
     "@vuepress/plugin-google-analytics": "2.0.0-beta.45",
     "@vuepress/plugin-register-components": "2.0.0-beta.45",
     "@vuepress/plugin-shiki": "2.0.0-beta.45",
-    "@panzhiyue/vuepress-theme-knowledge": "workspace:*",
-    "@panzhiyue/vuepress-plugin-demo-block": "workspace:*",
     "@vuepress/utils": "2.0.0-beta.45",
+    "dayjs": "^1.11.2",
+    "object-assign": "^4.1.1",
     "sass-loader": "^13.0.0",
     "serve": "^13.0.2",
     "vue": "^3.2.35"
   },
   "devDependencies": {
+    "@gis-js/vue2ol": "1.0.0-alpha.17",
+    "@gis-js/vue2ol-extend": "1.0.0-alpha.17",
     "less": "^2.7.2",
     "less-loader": "^4.0.5"
   }

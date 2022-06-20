@@ -29,8 +29,30 @@ export default defineUserConfig({
   },
 
   // specify bundler via environment variable
+  // bundler:
+  //   process.env.DOCS_BUNDLER === 'webpack' ? webpackBundler() : viteBundler(),
   bundler:
-    process.env.DOCS_BUNDLER === 'webpack' ? webpackBundler() : viteBundler(),
+    webpackBundler({
+      configureWebpack() {
+        return {
+          module: {
+            rules: [
+              {
+                test: /\.m?js/,
+                type: "javascript/auto",
+              },
+              {
+                test: /\.m?js/,
+                resolve: {
+                  fullySpecified: false,
+                },
+              },
+            ]
+          }
+        }
+      }
+
+    }),
 
   // configure default theme
   theme: defaultTheme({

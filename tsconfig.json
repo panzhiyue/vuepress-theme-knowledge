@@ -4,6 +4,7 @@
       "baseUrl": "./",
       "jsx": "preserve",
       "module": "ES2020",
+      
       "types": ["webpack-env", "vite/client", "@types/jest"]
     },
     "include": ["**/.vuepress/**/*", "packages/**/*"],
