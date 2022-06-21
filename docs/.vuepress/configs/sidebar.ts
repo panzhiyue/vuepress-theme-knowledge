@@ -5,7 +5,7 @@ export const sidebar: SidebarConfig = {
     '/ArcGIS/': resolveDir(resolve(__dirname, "../../ArcGIS/")),
     '/eCognition/': resolveDir(resolve(__dirname, "../../eCognition/")),
     '/leaflet/': resolveDir(resolve(__dirname, "../../leaflet/")),
-    '/openlayers/': resolveDir(resolve(__dirname, "../../openlayers/")),
+    '/openlayers/': resolveDir(resolve(__dirname, "../../openlayers/"),[/examples/]),
     '/SuperMap/': resolveDir(resolve(__dirname, "../../SuperMap/")),
     '/第三方地图/': resolveDir(resolve(__dirname, "../../第三方地图/")),
     '/nodejs/': resolveDir(resolve(__dirname, "../../nodejs/")),
@@ -20,5 +20,6 @@ export const sidebar: SidebarConfig = {
     '/gis/': resolveDir(resolve(__dirname, "../../gis/")),
     '/软件/': resolveDir(resolve(__dirname, "../../软件/")),
     '/java/': resolveDir(resolve(__dirname, "../../java/")),
+    '/cesium/': resolveDir(resolve(__dirname, "../../cesium/"),[/examples/]),
 }
 

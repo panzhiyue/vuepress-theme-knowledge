@@ -1,3 +1,7 @@
+# 用Openlayers3加载Bing在线中文版地图
+
+
+
 OpenLayers 3中提供了加载Bing地图的source [`ol.source.BingMaps`](https://link.jianshu.com/?t=http://openlayers.org/en/v3.13.1/apidoc/ol.source.BingMaps.html)，但是并不支持中文，构造函数的参数`culture`设置为中国是不行的，应该是Bing地图目前并没有提供中国区域的瓦片在线服务。但其实我们浏览Bing地图，看到的是中文版的地图。
 
 那么能否直接加载我们看到的中文版的Bing地图呢？OpenLayers针对瓦片地图提供了`ol.source.XYZ`和对应的`ol.layer.Tile`，可以帮助我们加载，之前的离线瓦片地图就是通过这种方式加载的 。 下面用同样的方式，我尝试加载Bing地图，遇到了稍许麻烦，主要在Tile的url拼接上。下面直接上代码：

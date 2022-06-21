@@ -17,6 +17,10 @@ export const navbar: NavbarConfig = [
                 link: '/ArcGIS/'
             },
             {
+                text: 'cesium',
+                link: '/cesium/'
+            },
+            {
                 text: 'eCognition',
                 link: '/eCognition/'
             },

@@ -22,10 +22,6 @@
 openlayers/examples/样式/Stroke/basic
 :::
 
-
-
-
-
 ## 虚线
 
 ::: demo 
