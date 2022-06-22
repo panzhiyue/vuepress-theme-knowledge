@@ -9,7 +9,6 @@ import { defaultTheme } from '@panzhiyue/vuepress-theme-knowledge'
 import { path } from '@vuepress/utils'
 import { navbar, sidebar } from './configs'
 import demoBloclPlugin from '@panzhiyue/vuepress-plugin-demo-block'
-
 const isProd = process.env.NODE_ENV === 'production'
 
 export default defineUserConfig({
@@ -18,7 +17,7 @@ export default defineUserConfig({
   dest: '../dist',
   // // extra tags in `<head>`
   // head,
-
+  head: [['script', { src: '/vuepress-theme-knowledge/js/Cesium1.89/Cesium.js' }], ['link', { rel:"stylesheet", type:"text/css",href: '/vuepress-theme-knowledge/js/Cesium1.89/Widgets/widgets.css' }]],
   // site-level locales config
   locales: {
     '/': {
@@ -35,6 +34,9 @@ export default defineUserConfig({
     webpackBundler({
       configureWebpack() {
         return {
+          resolve: {
+            extensions: ['.js', '.vue', '.json',".png"],
+          },
           module: {
             rules: [
               {

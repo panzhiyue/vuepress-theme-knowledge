@@ -198,4 +198,3 @@ https://blog.csdn.net/xunbaogang/article/details/82388145
 
 （4）访问结果
 
-![1625563079866](../C%2523/WCF.assets/1625563079866.png)

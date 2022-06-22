@@ -7,7 +7,7 @@
       
       "types": ["webpack-env", "vite/client", "@types/jest"]
     },
-    "include": ["**/.vuepress/**/*", "packages/**/*"],
+    "include": ["**/.vuepress/**/*", "packages/**/*","docs/**/*"],
     "exclude": ["node_modules", ".temp", "lib", "dist"]
   }
   

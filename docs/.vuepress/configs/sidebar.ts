@@ -20,6 +20,6 @@ export const sidebar: SidebarConfig = {
     '/gis/': resolveDir(resolve(__dirname, "../../gis/")),
     '/软件/': resolveDir(resolve(__dirname, "../../软件/")),
     '/java/': resolveDir(resolve(__dirname, "../../java/")),
-    '/cesium/': resolveDir(resolve(__dirname, "../../cesium/"),[/examples/]),
+    '/cesium/': resolveDir(resolve(__dirname, "../../cesium/"),[/examples/,/customCesium/]),
 }
 

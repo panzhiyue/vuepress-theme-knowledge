@@ -64,6 +64,8 @@ importers:
       '@vuepress/plugin-register-components': 2.0.0-beta.45
       '@vuepress/plugin-shiki': 2.0.0-beta.45
       '@vuepress/utils': 2.0.0-beta.45
+      cesium: ^1.94.3
+      copy-webpack-plugin: ^11.0.0
       dayjs: ^1.11.2
       json-loader: ^0.5.7
       less: ^2.7.2
@@ -87,6 +89,7 @@ importers:
       '@vuepress/plugin-register-components': 2.0.0-beta.45
       '@vuepress/plugin-shiki': 2.0.0-beta.45
       '@vuepress/utils': 2.0.0-beta.45
+      cesium: 1.94.3
       dayjs: 1.11.2
       object-assign: 4.1.1
       ol: 6.14.1
@@ -96,6 +99,7 @@ importers:
     devDependencies:
       '@gis-js/vue2ol': 1.0.0-alpha.17
       '@gis-js/vue2ol-extend': 1.0.0-alpha.17
+      copy-webpack-plugin: 11.0.0
       json-loader: 0.5.7
       less: 2.7.3
       less-loader: 4.1.0_less@2.7.3
@@ -2421,7 +2425,6 @@ packages:
         optional: true
     dependencies:
       ajv: 8.11.0
-    dev: false
 
   /ajv-keywords/3.5.2_ajv@6.12.6:
     resolution: {integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==}
@@ -2438,7 +2441,6 @@ packages:
     dependencies:
       ajv: 8.11.0
       fast-deep-equal: 3.1.3
-    dev: false
 
   /ajv/4.11.8:
     resolution: {integrity: sha512-I/bSHSNEcFFqXLf91nchoNB9D1Kie3QKcWdchYUaoIg1+1bdWDkdfdlvdIOJbi9U8xR0y+MWc5D+won9v95WlQ==}
@@ -2463,7 +2465,6 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
-    dev: false
 
   /algoliasearch/4.13.1:
     resolution: {integrity: sha512-dtHUSE0caWTCE7liE1xaL+19AFf6kWEcyn76uhcitWpntqvicFHXKFoZe5JJcv9whQOTRM6+B8qJz6sFj+rDJA==}
@@ -2865,6 +2866,10 @@ packages:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
     dev: true
     optional: true
+
+  /cesium/1.94.3:
+    resolution: {integrity: sha512-F4/gP1pYkE4tNE/Z5v13Sw4QeTJ3QuvxpIxM7spJmHKI2AutbTjfPp3yXQCaorFAS44eGLUkIyV/mTR8YD3/HA==}
+    dev: false
 
   /chalk/2.4.1:
     resolution: {integrity: sha512-ObN6h1v2fTJSmUXoS3nMQ92LbDK9be4TV+6G+omQlGJFdcUX5heKi1LZ1YnRMIgwTLEj3E24bT6tYni50rlCfQ==}
@@ -3307,6 +3312,20 @@ packages:
       serialize-javascript: 6.0.0
       webpack: 5.72.1
     dev: false
+
+  /copy-webpack-plugin/11.0.0:
+    resolution: {integrity: sha512-fX2MWpamkW0hZxMEg0+mYnA40LTosOSa5TqZ9GYIBzyJa9C3QUaMPSE2xAi/buNr8u89SfD9wHSQVBzrRa/SOQ==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      webpack: ^5.1.0
+    dependencies:
+      fast-glob: 3.2.11
+      glob-parent: 6.0.2
+      globby: 13.1.2
+      normalize-path: 3.0.0
+      schema-utils: 4.0.0
+      serialize-javascript: 6.0.0
+    dev: true
 
   /core-util-is/1.0.2:
     resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
@@ -5005,6 +5024,17 @@ packages:
       slash: 4.0.0
     dev: false
 
+  /globby/13.1.2:
+    resolution: {integrity: sha512-LKSDZXToac40u8Q1PQtZihbNdTYSNMuWe+K5l+oa6KgDzSvVrHXlJy40hUP522RjAIoNLJYBJi7ow+rbFpIhHQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      dir-glob: 3.0.1
+      fast-glob: 3.2.11
+      ignore: 5.2.0
+      merge2: 1.4.1
+      slash: 4.0.0
+    dev: true
+
   /graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
 
@@ -5625,7 +5655,6 @@ packages:
 
   /json-schema-traverse/1.0.0:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
-    dev: false
 
   /json-schema/0.4.0:
     resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==}
@@ -6748,7 +6777,6 @@ packages:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
       safe-buffer: 5.2.1
-    dev: false
 
   /range-parser/1.2.0:
     resolution: {integrity: sha1-9JvmtIeJTdxA3MlKMi9hEJLgDV4=}
@@ -6957,7 +6985,6 @@ packages:
   /require-from-string/2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /requires-port/1.0.0:
     resolution: {integrity: sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=}
@@ -7095,7 +7122,6 @@ packages:
       ajv: 8.11.0
       ajv-formats: 2.1.1
       ajv-keywords: 5.1.0_ajv@8.11.0
-    dev: false
 
   /section-matter/1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
@@ -7155,7 +7181,6 @@ packages:
     resolution: {integrity: sha512-Qr3TosvguFt8ePWqsvRfrKyQXIiW+nGbYpy8XK24NQHE83caxWt+mIymTT19DGFbNWNLfEwsrkSmN64lVWB9ag==}
     dependencies:
       randombytes: 2.1.0
-    dev: false
 
   /serve-handler/6.1.3:
     resolution: {integrity: sha512-FosMqFBNrLyeiIDvP1zgO6YoTzFYHxLDEIavhlmQ+knB2Z7l1t+kGLHkZIDN7UVWqQAmKI3D20A6F6jo3nDd4w==}
@@ -7314,7 +7339,6 @@ packages:
   /slash/4.0.0:
     resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
     engines: {node: '>=12'}
-    dev: false
 
   /slice-source/0.4.1:
     resolution: {integrity: sha512-YiuPbxpCj4hD9Qs06hGAz/OZhQ0eDuALN0lRWJez0eD/RevzKqGdUx1IOMUnXgpr+sXZLq3g8ERwbAH0bCb8vg==}
