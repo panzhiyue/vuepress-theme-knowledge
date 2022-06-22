@@ -1,50 +1,51 @@
-﻿function Polyline(opt_options) {
-    var options = $.extend({
-        polyline: {
-            material: Cesium.Color.RED,
-            width: 5,
-            clampToGround: true
-        }
-    }, opt_options);
-    DrawModel.call(this, options);
+﻿class Polyline {
+    constructor(opt_options) {
+        var options = Object.assign({
+            polyline: {
+                material: Cesium.Color.RED,
+                width: 5,
+                clampToGround: true
+            }
+        }, opt_options);
 
+        super();
+        /**
+         * 点集合
+         * @type {Array}
+         */
+        this.positions_ = [];
+
+        /**
+         * 临时线对象
+         * @type {Cesium.Entity}
+         */
+        this.entity_ = undefined;
+
+        /**
+         * 线样式
+         * @type {Cesium.PolylineGraphics}
+         */
+        this.polyline_ = options.polyline;
+
+    }
     /**
-    * 点集合
-    * @type {Array}
-    */
-    this.positions_ = [];
-
-    /**
-    * 临时线对象
-    * @type {Cesium.Entity}
-    */
-    this.entity_ = undefined;
-
-    /**
-    * 线样式
-    * @type {Cesium.PolylineGraphics}
-    */
-    this.polyline_ = options.polyline;
-}
-Polyline.prototype = new DrawModel();
-/**
-* 绘图控件激活
-* @param {bool} bool true:激活,false:取消
-*/
-Polyline.prototype.setActive = function (bool) {
-
-//定义事件对象
+     * 绘图控件激活
+     * @param {bool} bool true:激活,false:取消
+     */
+    setActive(bool) {
+        //定义事件对象
         if (!this.handler_) {
             this.handler_ = new Cesium.ScreenSpaceEventHandler(this.viewer_.scene.canvas);
         }
         //激活
         if (bool) {
-
             //鼠标左键单击画点
             this.handler_.setInputAction(function (event) {
                 //触发开始绘制事件
                 if (this.positions_.length == 0) {
-                    this.drawStart.raiseEvent({ type: "drawStart" });
+                    this.drawStart.raiseEvent({
+                        type: "drawStart"
+                    });
                 }
                 //添加点
                 var ray = this.viewer_.camera.getPickRay(event.position);
@@ -81,14 +82,15 @@ Polyline.prototype.setActive = function (bool) {
 
             }.bind(this), Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 
-
-
             //双击鼠标左键结束
             this.handler_.setInputAction(function (event) {
                 //大于等于2个点时双击结束绘制
                 if (this.positions_.length >= 2) {
                     //触发结束绘制事件
-                    this.drawEnd.raiseEvent({ type: "drawEnd", positions: this.positions_ });
+                    this.drawEnd.raiseEvent({
+                        type: "drawEnd",
+                        positions: this.positions_
+                    });
                     //清空临时对象
                     this.positions_ = [];
                     this.viewer_.entities.remove(this.entity_);
@@ -105,4 +107,5 @@ Polyline.prototype.setActive = function (bool) {
                 this.handler_.destroy();
             }
         }
+    }
 }

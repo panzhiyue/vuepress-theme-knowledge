@@ -1,31 +1,30 @@
-﻿function Rectangle(opt_options) {
-    var options = $.extend({
-        rectangle: {
-            material: Cesium.Color.BLACK.withAlpha(0.4),
-            outline: true,
-            outlineWidth: 2,
-            outlineColor: Cesium.Color.RED,
-            heightReference: Cesium.HeightReference.CLAMP_TO_GROUND
-        }
-    }, opt_options);
-    this.positions_ = [];
-    this.poly_ = undefined;
+﻿class Rectangle {
+    constructor(opt_options) {
+        var options = Object.assign({
+            rectangle: {
+                material: Cesium.Color.BLACK.withAlpha(0.4),
+                outline: true,
+                outlineWidth: 2,
+                outlineColor: Cesium.Color.RED,
+                heightReference: Cesium.HeightReference.CLAMP_TO_GROUND
+            }
+        }, opt_options);
 
+        this.positions_ = [];
+        this.poly_ = undefined;
+
+        /**
+         * 矩形样式
+         * @type {Cesium.RectangleGraphics}
+         */
+        this.rectangle_ = options.rectangle;
+    }
     /**
-     * 矩形样式
-     * @type {Cesium.RectangleGraphics}
+     * 绘图控件激活
+     * @param {bool} bool true:激活,false:取消
      */
-    this.rectangle_ = options.rectangle;
-
-}
-
-Rectangle.prototype = new DrawModel();
-/**
-* 绘图控件激活
-* @param {bool} bool true:激活,false:取消
-*/
-Rectangle.prototype.setActive = function (bool) {
-if (!this.handler_) {
+    setActive(bool) {
+        if (!this.handler_) {
             this.handler_ = new Cesium.ScreenSpaceEventHandler(this.viewer_.scene.canvas);
         }
         if (bool) {
@@ -33,7 +32,9 @@ if (!this.handler_) {
             //鼠标左键单击画点
             this.handler_.setInputAction(function (event) {
                 if (this.positions_.length == 0) {
-                    this.drawStart.raiseEvent({ type: "drawStart" });
+                    this.drawStart.raiseEvent({
+                        type: "drawStart"
+                    });
 
                     var ray = this.viewer_.camera.getPickRay(event.position);
                     var position = this.viewer_.scene.globe.ellipsoid.cartesianToCartographic(this.viewer_.scene.globe.pick(ray, this.viewer_.scene));
@@ -75,7 +76,10 @@ if (!this.handler_) {
 
                     var rect = Cesium.Rectangle.fromCartographicArray([position, this.positions_[0]]);
 
-                    this.drawEnd.raiseEvent({ type: "drawEnd", rect: rect });
+                    this.drawEnd.raiseEvent({
+                        type: "drawEnd",
+                        rect: rect
+                    });
                     this.positions_ = [];
                     this.viewer_.entities.remove(this.poly_);
                     this.poly_ = null;
@@ -88,5 +92,5 @@ if (!this.handler_) {
                 this.handler_.destroy();
             }
         }
-
+    }
 }
