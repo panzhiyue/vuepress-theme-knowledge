@@ -9,8 +9,8 @@ import {
   Vue2olGeomPoint,
 } from "@gis-js/vue2ol";
 import { Vue2olSourceTdt } from "@gis-js/vue2ol-extend";
-import { Style, Icon } from "ol/style";
-import markerIcon from "./marker.png"
+import { Style, Icon, Image } from "ol/style";
+import markerIcon from "./marker.png";
 export default {
   components: {
     Vue2olMap,
@@ -33,17 +33,20 @@ export default {
         projection: "EPSG:4326", //坐标系
       },
       coordinates: [120, 28],
-      style: new Style({
-        image: new Icon({
-          anchor: [0.5, 1],
-          scale: 0.15,
-          src: markerIcon,
-        }),
-      }),
+      style: null,
       radius: 0.1,
     };
   },
-  mounted() {},
+  mounted() {
+    this.style = new Style({
+      image: new Icon({
+        anchor: [0.5, 1],
+        scale: 0.15,
+        src: markerIcon,
+      }),
+    });
+    console.log(markerIcon);
+  },
 };
 </script>
 

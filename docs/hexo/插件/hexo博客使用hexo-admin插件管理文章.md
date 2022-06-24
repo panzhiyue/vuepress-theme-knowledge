@@ -77,7 +77,7 @@ admin:
 
 “`_config.yml`”的参数可以使用hexo-admin自动生成，打开hexo-admin界面，点击导航的“settings”选项，输入内容。
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_4757feb6fac6340086e11b2f9b48edc6_r.png)
+![在这里插入图片描述](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230928983.png)
 
 
 输入内容后下滑，找到生成的代码，复制到“”中重启hexo，打来hexo-admin的界面。
@@ -114,7 +114,7 @@ metadata:
 
 
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_0f63e6d44c688bb25a165dfa952aafba_r.png)
+![在这里插入图片描述](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230929350.png)
 
 
 

@@ -17,7 +17,7 @@ export default defineUserConfig({
   dest: '../dist',
   // // extra tags in `<head>`
   // head,
-  head: [['script', { src: '/vuepress-theme-knowledge/js/Cesium1.89/Cesium.js' }], ['link', { rel:"stylesheet", type:"text/css",href: '/vuepress-theme-knowledge/js/Cesium1.89/Widgets/widgets.css' }]],
+  head: [['script', { src: '/vuepress-theme-knowledge/js/Cesium1.89/Cesium.js' }], ['link', { rel: "stylesheet", type: "text/css", href: '/vuepress-theme-knowledge/js/Cesium1.89/Widgets/widgets.css' }]],
   // site-level locales config
   locales: {
     '/': {
@@ -35,24 +35,28 @@ export default defineUserConfig({
       configureWebpack() {
         return {
           resolve: {
-            extensions: ['.js', '.vue', '.json',".png"],
+            extensions: ['.js', '.vue', ".json"],
           },
           module: {
             rules: [
               {
-                test: /\.m?js/,
+                test: /\.m?js$/,
                 type: "javascript/auto",
               },
               {
-                test: /\.m?js/,
+                test: /\.m?js$/,
                 resolve: {
                   fullySpecified: false,
                 },
               },
+              // {
+              //   test: /\.json$/,
+              //   use: "json-loader"
+              // },
               {
-                test: /\.json$/,
-                use: "json-loader"
-              },
+                test: /\.(png|gif|jpg|jpeg|svg|xml|jfif)$/,
+                use: ['url-loader']
+              }
             ]
           }
         }

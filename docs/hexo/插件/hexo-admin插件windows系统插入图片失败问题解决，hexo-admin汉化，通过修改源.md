@@ -36,7 +36,7 @@
 在使用hexo插入图片的时候，我发现插入的 图片显示错误，而且链接有问题，不应该是“’！[upload successful] (\images\pasted-1.png)’”
 应该是“’！[upload successful] (/images/pasted-1.png)’”
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_1044355fb1d8b10809fbd45ecbc93e8d_r.png)
+![在这里插入图片描述](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230927360.png)
 
 
 
@@ -44,7 +44,7 @@
 
 既然图片链接格式有错，我就手动改了一下链接，发现图片成功显示了，发布之后都可以正常使用。但是不能每次都怎么自己改代码，太麻烦了。后来我赵找到了问题所在。
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_2e58790f61b05204516ce98721aec5dc_r.png)
+![在这里插入图片描述](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230927484.png)
 
 
 
@@ -59,7 +59,7 @@
 
 2.双击进入该文件夹，打开“”文件，通过搜索“”字符找到下图的代码片段，红框内就是我们要改的代码。
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_fabb0de934b7ca554f4c6151e3b51c54_r.png)
+![在这里插入图片描述](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230927179.png)
 
 
 3.将代码修改为
@@ -92,7 +92,7 @@
 
 1.打开hexo-admin目录下的子目录，找到“bundle.js文件”，并打开它。
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_6cdf4ddfd6d6a76fb8d32c9f06320f08_r.png)
+![在这里插入图片描述](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230927135.png)
 
 
 2.搜索“‘upload’”找到以下代码
@@ -130,7 +130,7 @@ uploadImage: function(data, filename)  {return post('/images/upload', {data: dat
 
 在这里插入图片描述
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_f327736fd665c1a4bb403a246248ac52_r.png)2021-10-26 21:00:27 星期二
+![在这里插入图片描述](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230928450.png)
 
 
 
@@ -138,7 +138,7 @@ uploadImage: function(data, filename)  {return post('/images/upload', {data: dat
 
 原本系统默认将图片统一存储在“`images`”目录下，文章一多，图片数量疯涨，就不容易维护，所以我添加了按文章存储图片的功能，图片将存储在与文章同目录的同名文件夹下。
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_04ea90e1ff34ddd80919be97c812392f_r.png)
+![在这里插入图片描述](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230928387.png)
 
 
 只需要在设置界面，勾选“图片存储在资源目录下”选项即可，取消勾选则将图片存放在hexo-admin定义的存储目录下。

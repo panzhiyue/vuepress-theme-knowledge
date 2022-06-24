@@ -2,9 +2,9 @@
   "name": "docs",
   "private": true,
   "scripts": {
-    "docs:build": "vuepress-cli build --clean-cache",
+    "docs:build": "vuepress-cli build",
     "docs:clean": "rimraf .vuepress/.temp .vuepress/.cache .vuepress/dist",
-    "docs:dev": "vuepress-cli dev --clean-cache",
+    "docs:dev": "vuepress-cli dev",
     "docs:serve": "vuepress-cli serve --clean-cache"
   },
   "dependencies": {
@@ -32,9 +32,12 @@
   "devDependencies": {
     "@gis-js/vue2ol": "1.0.0-alpha.17",
     "@gis-js/vue2ol-extend": "1.0.0-alpha.17",
+    "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
+    "file-loader": "^6.2.0",
     "json-loader": "^0.5.7",
     "less": "^2.7.2",
-    "less-loader": "^4.0.5"
+    "less-loader": "^4.0.5",
+    "url-loader": "^4.1.1"
   }
 }

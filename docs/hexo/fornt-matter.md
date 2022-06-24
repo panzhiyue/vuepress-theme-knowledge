@@ -135,7 +135,7 @@ layout: tag
    123456789
    ```
 
-![](D:/SoftWareInstall/Typora2/uploads/hexo/images/m_0c772c20fa2a19ddade2ba19e5e42004_r.png)
+
 
 #### 2.categories创建步骤
 

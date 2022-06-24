@@ -102,19 +102,19 @@ namespace WcfService1
 
 在“WCF 测试客户端”窗体中，双击 IService1 下的 GetData() 方法。 此时会显示 "工作" 选项卡。
 
-![img](C:/Users/Admin/Downloads/netDoc-master/netDoc-master/WCF.assets/download-1625558254405.jfif)
+![image-20220623092223470](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230922517.png)
 
  
 
  在“请求”框中，选择“值”字段，并键入 1314。
 
-![img](C:/Users/Admin/Downloads/netDoc-master/netDoc-master/WCF.assets/download-1625558254407.jfif)
+![image-20220623092235342](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230922377.png)
 
  
 
  如上所示，我们的服务没有问题，然后在浏览器输入服务地址http://192.168.43.219/SchoolService(配置文件中的baseAddress)查看服务，我们可以点击查看服务的wsdl文档，wsdl详细展示了服务的方法、数据类型、服务地址等信息。
 
-![img](C:/Users/Admin/Downloads/netDoc-master/netDoc-master/WCF.assets/download-1625558254435.jfif)
+![image-20220623092243782](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202206230922819.png)
 
  
 

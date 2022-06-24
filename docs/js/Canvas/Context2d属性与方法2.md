@@ -509,7 +509,9 @@ ctx.fillText("textAlign=right",150,140);
 
  下面的图示演示了 textBaseline 属性支持的各种基线： 
 
- ![文本基线图示](Context2d%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%952.assets/textBaseline.gif) 
+
+
+
 
  **注释：**[fillText()](https://www.w3school.com.cn/tags/canvas_filltext.asp) 或 [strokeText()](https://www.w3school.com.cn/tags/canvas_stroketext.asp) 方法在画布上定位文本时，将使用指定的 textBaseline 值。 
 

@@ -126,7 +126,7 @@ foreach (ListViewItem item in this.listView1.Items)
  this.listView1.Items.Clear(); //只移除所有的项。
 ```
 
-![img](C:/Users/892105~1/AppData/Local/Temp/ksohtml8816/wps1.png) 
+
 
 ##### 2.largeIcon视图：
 
@@ -142,7 +142,7 @@ foreach (ListViewItem item in this.listView1.Items)
  this.listView1.EndUpdate();
 ```
 
-![img](C:/Users/892105~1/AppData/Local/Temp/ksohtml8816/wps2.png) 
+
 
 ##### 3.SmallIcon视图：
 
@@ -158,7 +158,7 @@ foreach (ListViewItem item in this.listView1.Items)
  this.listView1.EndUpdate();
 ```
 
-![img](C:/Users/892105~1/AppData/Local/Temp/ksohtml8816/wps3.png) 
+
 
 ##### 4.List视图
 
@@ -175,9 +175,9 @@ foreach (ListViewItem item in this.listView1.Items)
  this.listView1.EndUpdate();
 ```
 
-![img](C:/Users/892105~1/AppData/Local/Temp/ksohtml8816/wps4.png) 
 
-### 
+
+
 
 #### 1.5代码
 
@@ -218,7 +218,7 @@ string personid = ListView_renyuan.FocusedItem.SubItems[0].Text;
  }
 ```
 
-![img](C:/Users/892105~1/AppData/Local/Temp/ksohtml8816/wps5.png) 
+ 
 
 ##### 3.查找文本（只能查找到匹配前缀的文本且只能找出第一个符合的项）
 
