@@ -4,7 +4,7 @@
   "scripts": {
     "docs:build": "vuepress-cli build",
     "docs:clean": "rimraf .vuepress/.temp .vuepress/.cache .vuepress/dist",
-    "docs:dev": "vuepress-cli dev --mode",
+    "docs:dev": "vuepress-cli dev",
     "docs:serve": "vuepress-cli serve --clean-cache"
   },
   "dependencies": {
@@ -13,20 +13,22 @@
     "@panzhiyue/vuepress-theme-knowledge": "workspace:*",
     "@turf/turf": "^6.5.0",
     "@vitejs/plugin-legacy": "^1.8.2",
-    "@vuepress/bundler-vite": "2.0.0-beta.48",
-    "@vuepress/bundler-webpack": "2.0.0-beta.48",
-    "@vuepress/cli": "2.0.0-beta.48",
-    "@vuepress/client": "2.0.0-beta.48",
-    "@vuepress/core": "2.0.0-beta.48",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.48",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.48",
-    "@vuepress/plugin-register-components": "2.0.0-beta.48",
-    "@vuepress/plugin-shiki": "2.0.0-beta.48",
-    "@vuepress/utils": "2.0.0-beta.48",
+    "@vuepress/bundler-vite": "2.0.0-beta.45",
+    "@vuepress/bundler-webpack": "2.0.0-beta.45",
+    "@vuepress/cli": "2.0.0-beta.45",
+    "@vuepress/client": "2.0.0-beta.45",
+    "@vuepress/core": "2.0.0-beta.45",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.45",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.45",
+    "@vuepress/plugin-register-components": "2.0.0-beta.45",
+    "@vuepress/plugin-shiki": "2.0.0-beta.45",
+    "@vuepress/utils": "2.0.0-beta.45",
+    "amap-sdk": "^1.0.1",
     "cesium": "^1.94.3",
+    "cjs2esmodule": "^1.1.1",
     "dayjs": "^1.11.2",
     "object-assign": "^4.1.1",
-    "ol": "^6.14.1",
+ 
     "sass-loader": "^13.0.0",
     "serve": "^13.0.2",
     "vue": "^3.2.35"
@@ -36,6 +38,7 @@
     "@gis-js/vue2ol": "1.0.0-alpha.27",
     "@gis-js/vue2ol-extend": "1.0.0-alpha.27",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@vitejs/plugin-vue": "^2.3.3",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
     "file-loader": "^6.2.0",
@@ -43,6 +46,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "rollup-plugin-polyfill-node": "^0.10.1",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "ol": "^6.14.1"
   }
 }

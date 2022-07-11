@@ -3,24 +3,27 @@
 </template>
 
 <script>
-import AMapLoader from "@amap/amap-jsapi-loader";
+// import AMapLoader from "amap-jsapi-loader";
 export default {
   mounted() {
-    AMapLoader.load({
-      key: "c47444380bd1a8fb8168d5adc71bf0b2", //首次load必填
-      version: "2.0",
-      plugins: [],
-    })
-      .then((AMap) => {
-        let map = new AMap.Map(this.$el, {
-          resizeEnable: true,
-          zoom: 11,
-          center: [116.397428, 39.90923],
-        });
+    import("@amap/amap-jsapi-loader").then((module) => {
+      let AMapLoader = module.default;
+      AMapLoader.load({
+        key: "c47444380bd1a8fb8168d5adc71bf0b2", //首次load必填
+        version: "2.0",
+        plugins: [],
       })
-      .catch((e) => {
-        console.log(e);
-      });
+        .then((AMap) => {
+          let map = new AMap.Map(this.$el, {
+            resizeEnable: true,
+            zoom: 11,
+            center: [116.397428, 39.90923],
+          });
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    });
   },
 };
 </script>

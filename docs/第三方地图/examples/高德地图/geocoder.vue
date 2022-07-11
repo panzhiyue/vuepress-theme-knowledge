@@ -20,36 +20,38 @@
 </template>
 
 <script>
-import AMapLoader from "@amap/amap-jsapi-loader";
-console.log(AMapLoader);
+// import AMapLoader from "amap-jsapi-loader";
 export default {
   data() {
     return {
-      address: "建业路418号",
-      AMap: null,
-      map: null,
+      address: "杭州市西湖区体育场路498号", //地址
+      AMap: null, //地图API示例
+      map: null, //地图实例
     };
   },
   mounted() {
-    window._AMapSecurityConfig = {
-      securityJsCode: "825c7a80988be7e7757fcbc6ad8e417c",
-    };
-    AMapLoader.load({
-      key: "c47444380bd1a8fb8168d5adc71bf0b2", //首次load必填
-      version: "2.0",
-      plugins: [],
-    })
-      .then((AMap) => {
-        this.AMap = AMap;
-        this.map = new AMap.Map("geocoder_container", {
-          resizeEnable: true,
-          zoom: 11,
-          center: [116.397428, 39.90923],
-        });
+    import("@amap/amap-jsapi-loader").then((module) => {
+      let AMapLoader = module.default;
+      window._AMapSecurityConfig = {
+        securityJsCode: "825c7a80988be7e7757fcbc6ad8e417c",
+      };
+      AMapLoader.load({
+        key: "c47444380bd1a8fb8168d5adc71bf0b2", //首次load必填
+        version: "2.0",
+        plugins: [],
       })
-      .catch((e) => {
-        console.log(e);
-      });
+        .then((AMap) => {
+          this.AMap = AMap;
+          this.map = new AMap.Map("geocoder_container", {
+            resizeEnable: true,
+            zoom: 11,
+            center: [116.397428, 39.90923],
+          });
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    });
   },
   methods: {
     geocoder() {
