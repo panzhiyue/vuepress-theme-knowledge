@@ -9,7 +9,7 @@ import {
   Vue2olGeomPoint,
 } from "@gis-js/vue2ol";
 import { Vue2olSourceTdt } from "@gis-js/vue2ol-extend";
-import { Style, Icon } from "ol/style";
+import { Style, Icon, Circle, Fill } from "ol/style";
 import markerIcon from "./marker.png";
 
 export default {
@@ -34,24 +34,68 @@ export default {
         projection: "EPSG:4326", //坐标系
       },
       coordinates: [120, 28],
-      style: null,
+      //   style: null,
       radius: 0.1,
+      position: "left-top",
     };
   },
+  computed: {
+    style() {
+      let styles = [];
+      styles.push(
+        new Style({
+          image: new Circle({
+            fill: new Fill({
+              color: "#fff",
+            }),
+            radius: 4,
+          }),
+        })
+      );
+
+      let anchor = null;
+      switch (this.position) {
+        case "left-top": {
+          anchor = [0, 0];
+          break;
+        }
+        case "right-top": {
+          anchor = [1, 0];
+          break;
+        }
+        case "left-bottom": {
+          anchor = [0, 1];
+          break;
+        }
+        case "right-bottom": {
+          anchor = [1, 1];
+          break;
+        }
+      }
+      styles.push(
+        new Style({
+          image: new Icon({
+            anchor: anchor,
+            scale: 0.15,
+            src: markerIcon,
+          }),
+        })
+      );
+      return styles;
+    },
+  },
   mounted() {
-    this.style = new Style({
-      image: new Icon({
-        // anchor: [0.5, 1],
-        scale: 0.15,
-        src: markerIcon,
-      }),
-    });
-    console.log(markerIcon);
   },
 };
 </script>
 
 <template>
+  <select v-model="position">
+    <option value="left-top">左上角</option>
+    <option value="right-top">右上角</option>
+    <option value="left-bottom">左下角</option>
+    <option value="right-bottom">右下角</option>
+  </select>
   <vue2ol-map style="height: 400px" :options="mapOptions">
     <vue2ol-view :zoom="zoom" :center="center" :options="viewOptions">
     </vue2ol-view>

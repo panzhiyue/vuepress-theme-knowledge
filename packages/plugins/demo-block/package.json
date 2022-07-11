@@ -29,8 +29,8 @@
         "copy": "cpx \"src/**/*.{d.ts,vue,scss,js,json}\" lib"
     },
     "dependencies": {
-        "@vuepress/core": "2.0.0-beta.45",
-        "@vuepress/utils": "2.0.0-beta.45",
+        "@vuepress/core": "2.0.0-beta.48",
+        "@vuepress/utils": "2.0.0-beta.48",
         "ts-debounce": "^4.0.0",
         "vue": "^3.2.33",
         "markdown-it": "^12.3.2",
