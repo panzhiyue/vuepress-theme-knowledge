@@ -1,5 +1,5 @@
 <template>
-  <Button @click="onClick">执行</Button>
+  <input type="button" @click="onClick" value="执行" />
 </template>
 
 <script>

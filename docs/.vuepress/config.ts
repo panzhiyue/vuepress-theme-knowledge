@@ -6,15 +6,9 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { defaultTheme } from '@panzhiyue/vuepress-theme-knowledge'
-import { path } from '@vuepress/utils'
 import { navbar, sidebar } from './configs'
 import demoBloclPlugin from '@panzhiyue/vuepress-plugin-demo-block'
-import { viteCommonjs, esbuildCommonjs } from '@originjs/vite-plugin-commonjs'
-import legacy from "@vitejs/plugin-legacy"
-import nodePolyfills from "rollup-plugin-polyfill-node";
-import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfill";
-import { cjs2esmVitePlugin } from "cjs2esmodule"
-import vue from '@vitejs/plugin-vue'
+
 
 const isProd = process.env.NODE_ENV === 'production'
 
