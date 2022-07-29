@@ -1,0 +1,1 @@
+define(["exports","./defined-2a4f2d00"],(function(e,f){"use strict";var n=Object.freeze;f.defined(n)||(n=function(e){return e});var r=n;e.freezeObject=r}));

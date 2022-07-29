@@ -1,0 +1,1 @@
+define(["exports","./freezeObject-a51e076f"],(function(e,r){"use strict";var t=r.freezeObject({NONE:0,GEODESIC:1,RHUMB:2});e.ArcType=t}));

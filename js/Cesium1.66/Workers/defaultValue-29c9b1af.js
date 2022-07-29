@@ -1,0 +1,1 @@
+define(["exports","./freezeObject-a51e076f"],(function(e,t){"use strict";function f(e,t){return null!=e?e:t}f.EMPTY_OBJECT=t.freezeObject({}),e.defaultValue=f}));
