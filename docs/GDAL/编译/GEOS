@@ -1,0 +1,67 @@
+# GEOS
+
+## 一、下载
+
+下载[geos-3.5.0](http://trac.osgeo.org/geos/)，放在F:\geos350中
+
+## 二、打开VS的开发者工具
+
+![image-20210901160121158](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208010926255.png)
+
+## 三、依次执行如下命令
+
+```
+>VCVARS32.BAT
+>cd F:\geos350
+>autogen.bat
+>nmake /f makefile.vc
+>
+```
+
+编译成功后，会在f:/geos350/src目录下生成geos.lib, geos_i.lib, geos_c_i.lib, geos.dll, geos_c.dll等五个文件
+
+![image-20210901160237176](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208010926251.png)
+
+![image-20210901160251218](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208010926238.png)
+
+
+
+## 四、修改GDAL的makefile.opt文件
+
+```xml
+# Uncomment for GEOS support
+
+GEOS_DIR=F:/geos350
+GEOS_CFLAGS = -I$(GEOS_DIR)/capi -I$(GEOS_DIR)/include -DHAVE_GEOS
+GEOS_LIB     = $(GEOS_DIR)/src/geos_c_i.lib
+```
+
+![image-20210901160947206](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208010926247.png)
+
+## 五、重新编译GDAL
+
+https://panzhiyue.gitee.io/post/GDAL/%E7%BC%96%E8%AF%91GDAL
+
+## 六、可能出现的错误
+
+如果出现cannot determine visual c++ version
+
+![image-20210901160324456](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208010926245.png)
+
+
+
+打开nmake.opt文件，找到VS版本判断代码
+
+![image-20210901160422136](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208010926271.png)
+
+保留自己的VS版本，删除其他片段
+
+![image-20210901160507558](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208010926593.png)
+
+
+
+
+
+## 七、参考资源
+
+https://www.cnblogs.com/denny402/p/4966558.html
