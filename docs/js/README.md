@@ -1,5 +1,59 @@
 
 
+# JavaScript简介
+
+JavaScript是一种专为与网页交互而设计的脚本语言，由下列三个不同的部分组成：
+
+- ECMAScript：由ECMA-262定义，提供核心语言功能
+- 文档对象模型（DOM）:提供访问和操作网页内容的方法和接口
+- 浏览器对象模型（BOM）：提供与浏览器交互的方法和接口
+
+## 在HTML中使用JavaScript
+
+### script元素
+
+- async：可选。表示应该立即下载脚本，但不应妨碍页面中的其他操作，比如下载其他资源或等待加载其他脚本。只对外部脚本文件有效
+- charset：可选。表示通过src属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。
+- defer：可选。表示脚本可以延迟到文档完全被解析和显示之后再执行。只对外部脚本文件有效。IE7及更早版本对嵌入脚本也支持这个属性。
+- src：可选。表示包含要执行代码的外部文件
+- type：可选。可以看成是labguage的替代属性；表示编写代码使用的脚本语言的内容类型（也称为MIME类型）。
+
+#### 嵌入式
+
+```javascript
+<script type="text/javascript">
+	function sayHi(){
+		alert("Hi!");
+	}
+</script>
+```
+
+#### 外部文件
+
+```javascript
+<script type="text/javascript" src="example.js" />
+```
+
+#### 小结
+
+无论如何包含代码，只要不存在defer和async属性，浏览器都会按照`<script>`元素在页面中出现的先后顺序对它们依次进行解析。
+
+由于浏览器会先解析完不使用defer属性的`<script>`元素中的代码，然后再解析后面的内容。所以一般应该把`<script>`元素放在页面最后，即主要内容后面，`<body/>`标签前面。
+
+# JavaScript学习资料
+
+
+
+w3school:https://www.w3school.com.cn/jsref/dom_obj_all.asp
+
+
+
+在线JavaScript编辑器:https://c.runoob.com/front-end/61/
+
+
+
+
+
 1.右键菜单
 
 ```javascript

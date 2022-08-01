@@ -37,6 +37,10 @@ export const navbar: NavbarConfig = [
                 link: '/openlayers/'
             },
             {
+                text: 'MapBox',
+                link: '/MapBox/'
+            },
+            {
                 text: '第三方地图',
                 link: '/第三方地图/'
             },
@@ -52,6 +56,10 @@ export const navbar: NavbarConfig = [
             {
                 text: 'css',
                 link: '/css/'
+            },
+            {
+                text: 'js',
+                link: '/js/'
             },
         ],
     },

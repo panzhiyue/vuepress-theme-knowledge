@@ -21,5 +21,6 @@ export const sidebar: SidebarConfig = {
     '/软件/': resolveDir(resolve(__dirname, "../../软件/")),
     '/java/': resolveDir(resolve(__dirname, "../../java/")),
     '/cesium/': resolveDir(resolve(__dirname, "../../cesium/"),[/examples/,/customCesium/]),
+    '/js/': resolveDir(resolve(__dirname, "../../js/"),[/examples/])
 }
 
