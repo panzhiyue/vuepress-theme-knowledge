@@ -44,6 +44,10 @@ export const navbar: NavbarConfig = [
                 text: '第三方地图',
                 link: '/第三方地图/'
             },
+            {
+                text: 'Geoserver',
+                link: '/Geoserver/'
+            },
         ],
     },
     {

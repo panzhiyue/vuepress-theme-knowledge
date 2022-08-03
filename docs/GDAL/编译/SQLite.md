@@ -31,7 +31,9 @@ F:.
 
 在SQLite目录下创建一个新工程
 
-![点击创建新项目](../../../../PZYDemo/myBlog/source/_posts/GDAL/%E7%BC%96%E8%AF%91SQLite%E5%BA%93/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjE0MTU4OQ==,size_16,color_FFFFFF,t_70.x-ms-bmp?lastModify=1659317881)
+![image-20220801171411997](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208011714049.png)
+
+
 
 ![image-20220801093818379](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208010938428.png)
 

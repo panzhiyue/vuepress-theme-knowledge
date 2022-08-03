@@ -1,0 +1,16 @@
+# Geoserver修改端口号
+
+> windows
+>
+> Geoserver2.12.3
+
+
+
+Geoserver默认端口号是8080,不过有些运营商会禁止访问8080端口,导致不得不修改端口号,网上的教程有很多,例如修改$GEOSERVER_HOME/etc/jetty.xml文件,修改startup.bat文件,不过都无效
+
+### 通过修改注册表修改Geoserver端口号
+
+在注册表里修改：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\GeoServer 2.0.2\ImagePath
+
+猜测:通过修改注册表和文件都可以修改geoserver端口号,不过注册表优先级最高,当注册表没有指定端口号时可以通过修改文件来修改端口号(有时间可以实践一下)
+

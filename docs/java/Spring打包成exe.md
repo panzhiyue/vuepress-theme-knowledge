@@ -55,7 +55,7 @@ https://blog.csdn.net/zhuimeng_by/article/details/88952026
 
 ## 在build->plugins添加以下插件
 
-需要注意的是 <mainClass>org.springframework.boot.loader.JarLauncher</mainClass>
+需要注意的是` <mainClass>org.springframework.boot.loader.JarLauncher</mainClass>`
 
 其他选项按项目实际情况修改
 
