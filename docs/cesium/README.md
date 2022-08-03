@@ -88,7 +88,7 @@ new ClippingPlane(normal, distance)
 
 代表了平面与原点的距离,如下图展示了`new Cesium.Cartesian3(0,0,1)`平面`distance`值不同所显示的不同效果
 
-![img](https://gitee.com/panzhiyue/picgo-image/raw/master/img/202111010858874.gif) 
+![img](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202111010858874.gif) 
 
 
 

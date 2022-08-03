@@ -3,7 +3,7 @@ import type { NavbarConfig } from '@panzhiyue/vuepress-theme-knowledge'
 export const navbar: NavbarConfig = [
     {
         text: '编程',
-        link:'/编程/'
+        link: '/编程/'
     },
     {
         text: 'gis',
@@ -47,6 +47,18 @@ export const navbar: NavbarConfig = [
             {
                 text: 'Geoserver',
                 link: '/Geoserver/'
+            }, {
+                text: 'GDAL',
+                link: '/GDAL/'
+            }, {
+                text: 'Geotools',
+                link: '/Geotools/'
+            },{
+                text: 'MapBox',
+                link: '/MapBox/'
+            },{
+                text: 'MapGIS',
+                link: '/MapGIS/'
             },
         ],
     },
@@ -64,6 +76,15 @@ export const navbar: NavbarConfig = [
             {
                 text: 'js',
                 link: '/js/'
+            },    {
+                text: 'html',
+                link: '/html/'
+            },   {
+                text: 'TypeScript',
+                link: '/TypeScript/'
+            },  {
+                text: 'Webpack',
+                link: '/Webpack/'
             },
         ],
     },
@@ -73,6 +94,9 @@ export const navbar: NavbarConfig = [
             {
                 text: 'windows',
                 link: '/windows/'
+            },{
+                text: 'Mac',
+                link: '/Mac/'
             },
         ],
     },
@@ -107,9 +131,46 @@ export const navbar: NavbarConfig = [
         ],
     },
     {
+        text: 'java',
+        link: '/java/'
+
+    },
+    {
         text: '软件',
         link: '/软件/'
-        
-    }
+
+    }, {
+        text: '其他',
+        children: [
+            {
+                text: '碎片',
+                link: '/碎片/'
+            },
+            {
+                text: '日常生活',
+                link: '/日常生活/'
+            },
+            {
+                text: 'echarts',
+                link: '/echarts/'
+            }, {
+                text: 'Flutter',
+                link: '/Flutter/'
+            }, {
+                text: 'gitbook',
+                link: '/gitbook/'
+            },
+            {
+                text: 'hexo',
+                link: '/hexo/'
+            }, {
+                text: 'jsdoc',
+                link: '/jsdoc/'
+            },{
+                text: 'python',
+                link: '/python/'
+            },
+        ],
+    },
 
 ]
