@@ -169,6 +169,9 @@ export const navbar: NavbarConfig = [
             },{
                 text: 'python',
                 link: '/python/'
+            },{
+                text: '文档语法',
+                link: '/文档语法/'
             },
         ],
     },

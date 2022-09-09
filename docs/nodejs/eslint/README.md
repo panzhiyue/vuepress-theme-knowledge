@@ -261,7 +261,8 @@ console.log('hello world');
       "no-undef-init": 2, //不允许初始化变量时给变量赋值undefined
       "no-undefined": 2, //不允许把undefined当做标识符使用
       "no-unused-vars": [2, {"vars": "all", "args": "after-used"}], //不允许有声明后未使用的变量或者参数
-      "no-use-before-define": [2, "nofunc"], //不允许在未定义之前就使用变量"indent": 2, //强制一致的缩进风格
+      "no-use-before-define": [2, "nofunc"], //不允许在未定义之前就使用变量
+      "indent": 2, //强制一致的缩进风格
       "brace-style": [2, "1tbs", { "allowSingleLine": false}], //大括号风格
       "camelcase": [2, {"properties": "never"}], //强制驼峰命名规则
       "comma-style": [2, "last"], //逗号风格

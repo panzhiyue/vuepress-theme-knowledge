@@ -686,6 +686,20 @@ node ./node_modules/esbuild/install.js
 
 
 
+### 动态引用图片
+
+```javascript
+    getImageUrl() {
+      let expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- ./?%&=]*)?/;
+      let objExp = new RegExp(expression);
+      if (!objExp.test(this.imgUrl)) {
+        return new URL(`../../assets/img/${this.imgUrl}`, import.meta.url).href
+      } else {
+        return this.imgUrl
+      }
+    }
+```
+
 
 
 ## 错误

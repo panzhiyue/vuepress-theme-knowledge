@@ -1,13 +1,17 @@
+// import vue from '@vitejs/plugin-vue'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 import { defineUserConfig } from '@vuepress/cli'
-import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
-import { shikiPlugin } from '@vuepress/plugin-shiki'
+// import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { searchPlugin } from '@vuepress/plugin-search'
+// import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+// import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+// import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { defaultTheme } from '@panzhiyue/vuepress-theme-knowledge'
 import { navbar, sidebar } from './configs'
 import demoBloclPlugin from '@panzhiyue/vuepress-plugin-demo-block'
+// import { viteCommonjs } from "@originjs/vite-plugin-commonjs";
+
 
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -32,72 +36,78 @@ export default defineUserConfig({
   // bundler:
   //   process.env.DOCS_BUNDLER === 'webpack' ? webpackBundler() : viteBundler(),
   bundler:
-    // viteBundler({
-    //   viteOptions: {
-    //     plugins: [viteCommonjs()],
-    //     // define: {
-    //     //   global: "globalThis",
-    //     // },
-    //     build: {
-    //       // rollupOptions: {
-    //       //   plugins: [nodePolyfills()],
-    //       // },
-    //       // commonjsOptions: {
-    //       //   transformMixedEsModules: true,
-    //       // },
-    //       // target: "esnext",
-    //       // ssr: true
-    //     },
-    //     // optimizeDeps: {
-    //     //   esbuildOptions: {
-    //     //     // Node.js global to browser globalThis
-    //     //     // define: {
-    //     //     //   global: "window",
-    //     //     // },
-    //     //     // Enable esbuild polyfill plugins
-    //     //     plugins: [
-    //     //       // NodeGlobalsPolyfillPlugin({
-    //     //       //   buffer: true,
-    //     //       // }),
-    //     //       esbuildCommonjs(['ol']) 
-    //     //     ],
-    //     //   },
-    //     //   },
-    //   }
-
-    // }),
-    webpackBundler({
-      configureWebpack() {
-        return {
-          resolve: {
-            extensions: ['.js', '.vue', ".json"],
-          },
-          module: {
-            rules: [
-              {
-                test: /\.m?js$/,
-                type: "javascript/auto",
-              },
-              {
-                test: /\.m?js$/,
-                resolve: {
-                  fullySpecified: false,
-                },
-              },
-              // {
-              //   test: /\.json$/,
-              //   use: "json-loader"
-              // },
-              // {
-              //   test: /\.(png|gif|jpg|jpeg|svg|xml|jfif)$/,
-              //   use: ['url-loader']
-              // }
-            ]
-          }
-        }
+    viteBundler({
+      viteOptions: {
+        plugins: [],
+        // define: {
+        //   global: "globalThis",
+        // },
+        build: {
+          // rollupOptions: {
+          //   plugins: [nodePolyfills()],
+          // },
+          // commonjsOptions: {
+          //   transformMixedEsModules: true,
+          // },
+          // target: "esnext",
+          // ssr: true
+        },
+        ssr: {
+          noExternal: ['vue-demi'],
+        },
+        // worker: {
+        //   format: "es"
+        // }
+        // optimizeDeps: {
+        //   esbuildOptions: {
+        //     // Node.js global to browser globalThis
+        //     // define: {
+        //     //   global: "window",
+        //     // },
+        //     // Enable esbuild polyfill plugins
+        //     plugins: [
+        //       // NodeGlobalsPolyfillPlugin({
+        //       //   buffer: true,
+        //       // }),
+        //       esbuildCommonjs(['ol']) 
+        //     ],
+        //   },
+        //   },
       }
 
     }),
+  // webpackBundler({
+  //   configureWebpack() {
+  //     return {
+  //       resolve: {
+  //         extensions: ['.js', '.vue', ".json"],
+  //       },
+  //       module: {
+  //         rules: [
+  //           {
+  //             test: /\.m?js$/,
+  //             type: "javascript/auto",
+  //           },
+  //           {
+  //             test: /\.m?js$/,
+  //             resolve: {
+  //               fullySpecified: false,
+  //             },
+  //           },
+  //           // {
+  //           //   test: /\.json$/,
+  //           //   use: "json-loader"
+  //           // },
+  //           // {
+  //           //   test: /\.(png|gif|jpg|jpeg|svg|xml|jfif)$/,
+  //           //   use: ['url-loader']
+  //           // }
+  //         ]
+  //       }
+  //     }
+  //   }
+
+  // }),
 
   // configure default theme
   theme: defaultTheme({
@@ -145,6 +155,13 @@ export default defineUserConfig({
   },
   // use plugins
   plugins: [
+    searchPlugin({
+      locales: {
+        '/': {
+          placeholder: '搜索',
+        },
+      },
+    }),
     // docsearchPlugin({
     //   appId: '34YFD9IUQ2',
     //   apiKey: '9a9058b8655746634e01071411c366b8',

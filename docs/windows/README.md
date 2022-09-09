@@ -151,6 +151,8 @@ sc stop serverName
 管理员权限下的cmd 命令，格式：instsrv.exe 服务名 remove
 例如：D:\gateway\Bat2Server\instsrv.exe Sentinel remove 
 
+
+
 ## 四、CMD
 
 ### 4.1 命令
@@ -515,3 +517,10 @@ pause
 ```bash
 pause
 ```
+
+
+
+### 4.3 设置网络代理
+
+https://www.cnblogs.com/yerenwz/p/15925848.html
+
