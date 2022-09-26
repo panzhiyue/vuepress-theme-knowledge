@@ -31,7 +31,6 @@ export default {
   },
   watch: {},
   methods: {
-    renderDefault() {},
   },
 };
 </script>

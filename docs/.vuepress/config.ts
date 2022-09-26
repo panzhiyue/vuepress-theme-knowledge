@@ -36,78 +36,78 @@ export default defineUserConfig({
   // bundler:
   //   process.env.DOCS_BUNDLER === 'webpack' ? webpackBundler() : viteBundler(),
   bundler:
-    viteBundler({
-      viteOptions: {
-        plugins: [],
-        // define: {
-        //   global: "globalThis",
-        // },
-        build: {
-          // rollupOptions: {
-          //   plugins: [nodePolyfills()],
-          // },
-          // commonjsOptions: {
-          //   transformMixedEsModules: true,
-          // },
-          // target: "esnext",
-          // ssr: true
-        },
-        ssr: {
-          noExternal: ['vue-demi'],
-        },
-        // worker: {
-        //   format: "es"
-        // }
-        // optimizeDeps: {
-        //   esbuildOptions: {
-        //     // Node.js global to browser globalThis
-        //     // define: {
-        //     //   global: "window",
-        //     // },
-        //     // Enable esbuild polyfill plugins
-        //     plugins: [
-        //       // NodeGlobalsPolyfillPlugin({
-        //       //   buffer: true,
-        //       // }),
-        //       esbuildCommonjs(['ol']) 
-        //     ],
-        //   },
-        //   },
+    // viteBundler({
+    //   viteOptions: {
+    //     plugins: [],
+    //     // define: {
+    //     //   global: "globalThis",
+    //     // },
+    //     build: {
+    //       // rollupOptions: {
+    //       //   plugins: [nodePolyfills()],
+    //       // },
+    //       // commonjsOptions: {
+    //       //   transformMixedEsModules: true,
+    //       // },
+    //       // target: "esnext",
+    //       // ssr: true
+    //     },
+    //     ssr: {
+    //       noExternal: ['vue-demi'],
+    //     },
+    //     // worker: {
+    //     //   format: "es"
+    //     // }
+    //     // optimizeDeps: {
+    //     //   esbuildOptions: {
+    //     //     // Node.js global to browser globalThis
+    //     //     // define: {
+    //     //     //   global: "window",
+    //     //     // },
+    //     //     // Enable esbuild polyfill plugins
+    //     //     plugins: [
+    //     //       // NodeGlobalsPolyfillPlugin({
+    //     //       //   buffer: true,
+    //     //       // }),
+    //     //       esbuildCommonjs(['ol']) 
+    //     //     ],
+    //     //   },
+    //     //   },
+    //   }
+
+    // }),
+    webpackBundler({
+      configureWebpack() {
+        return {
+          resolve: {
+            extensions: ['.js', '.vue', ".json"],
+          },
+          module: {
+            rules: [
+              {
+                test: /\.m?js$/,
+                type: "javascript/auto",
+              },
+              {
+                test: /\.m?js$/,
+                resolve: {
+                  fullySpecified: false,
+                },
+              },
+              // {
+              //   test: /\.json$/,
+              //   use: "json-loader"
+              // },
+              // {
+              //   test: /\.(png|gif|jpg|jpeg|svg|xml|jfif)$/,
+              //   use: ['url-loader']
+              // }
+            ]
+          }
+        }
       }
 
     }),
-  // webpackBundler({
-  //   configureWebpack() {
-  //     return {
-  //       resolve: {
-  //         extensions: ['.js', '.vue', ".json"],
-  //       },
-  //       module: {
-  //         rules: [
-  //           {
-  //             test: /\.m?js$/,
-  //             type: "javascript/auto",
-  //           },
-  //           {
-  //             test: /\.m?js$/,
-  //             resolve: {
-  //               fullySpecified: false,
-  //             },
-  //           },
-  //           // {
-  //           //   test: /\.json$/,
-  //           //   use: "json-loader"
-  //           // },
-  //           // {
-  //           //   test: /\.(png|gif|jpg|jpeg|svg|xml|jfif)$/,
-  //           //   use: ['url-loader']
-  //           // }
-  //         ]
-  //       }
-  //     }
-  //   }
-
-  // }),
 
   // configure default theme
   theme: defaultTheme({

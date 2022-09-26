@@ -18,6 +18,14 @@ https://www.electronjs.org/zh/docs/latest
 
 [electron-vue 常用api（持续更新)](https://www.jianshu.com/p/0a43bf25c318)
 
+https://github.com/wallace5303/electron-egg
+
+[关于Electron每个版本的完整和最新信息](https://www.npmjs.com/package/electron-releases)
+
+https://crifan.github.io/desktop_app_framework_electron/website/install/
+
+[优秀博客](https://www.jianshu.com/p/aebaf3f5f3c3)
+
 ## 开发
 
 ### 1.fs不要使用相对路径读取static目录下的文件
@@ -240,5 +248,21 @@ mainWindow = new BrowserWindow({
 
 
 
+## Bug
 
+### 1.在electron中某些包需要重新编译，例如better-sqlite3
+
+```
+yarn --cwd .\node_modules\better-sqlite3\ build-release --target=15.0.0 --arch=x64 --dist-url=https://electronjs.org/headers
+```
+
+2.
+
+![image-20220915143711489](C:/Users/Admin/AppData/Roaming/Typora/typora-user-images/image-20220915143711489.png)
+
+```
+npm config set ELECTRON_MIRROR http://npm.taobao.org/mirrors/electron/
+
+npm install --save-dev electron
+```
 
