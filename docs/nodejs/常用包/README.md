@@ -8,6 +8,7 @@
 | walk         | 遍历文件目录                                                 |      |
 | rollup       | JavaScript 模块打包器                                        |      |
 | chalk        | 命令行打印美化                                               |      |
+| concurrently | 运行多个命令                                                 |      |
 
 
 ## buble 
