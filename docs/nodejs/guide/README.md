@@ -829,6 +829,27 @@ username=panzhiyue&password=123456
 | 69   | **fs.createWriteStream(path[, options])** 返回 WriteStream 对象。 |
 | 70   | **fs.symlink(srcpath, dstpath[, type], callback)** 异步 symlink().回调函数没有参数，但可能抛出异常。 |
 
+#### 下载图片
+
+```javascript
+    let dom = homeStore.map.getTarget() as Element;
+    if (options.control == false) {
+      dom = dom.getElementsByClassName("ol-layers")[0];
+    }
+    let funcEnu = {
+      png: domtoimage.toPng,
+      jpg: domtoimage.toJpeg,
+    };
+
+    funcEnu[options.format](dom, { quality: 0.95 }).then(function (data) {
+      var base64 = data.split(",")[1]; //去掉图片base64码前面部分data:image/png;base64
+      const imageBuffer = new Buffer(base64, "base64");
+      fs.writeFileSync(options.path as string, imageBuffer);
+    });
+```
+
+
+
 ### Path
 
 用于处理文件路径和目录路径的实用工具
