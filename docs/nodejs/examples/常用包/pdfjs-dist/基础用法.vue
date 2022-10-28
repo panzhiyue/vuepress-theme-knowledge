@@ -1,20 +1,17 @@
 <script>
-import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.js";
-import * as pdfjsViewer from "pdfjs-dist/legacy/web/pdf_viewer.js";
-import workerSrc from "pdfjs-dist/build/pdf.worker.entry";
-pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
+let pdfjsLib, pdfjsViewer, workerSrc;
 import "pdfjs-dist/web/pdf_viewer.css";
 export default {
   data() {
-    return {
-    };
+    return {};
   },
-  props: {
-    pdfUrl: {
-      type: String,
-    }
-  },
-  mounted() {
+  props: {},
+  async mounted() {
+    pdfjsLib = await import("pdfjs-dist/legacy/build/pdf.js");
+    pdfjsViewer = await import("pdfjs-dist/legacy/web/pdf_viewer.js");
+    workerSrc = (await import("pdfjs-dist/build/pdf.worker.entry")).default;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
+
     const container = document.getElementById("viewerContainer", this.$el);
 
     const eventBus = new pdfjsViewer.EventBus();
@@ -24,14 +21,15 @@ export default {
     });
 
     // Loading document.
-    const loadingTask = pdfjsLib.getDocument(this.pdfUrl);
+    const loadingTask = pdfjsLib.getDocument(
+      "http://doc.panzhiyue.website/%E5%9B%BE%E4%B9%A6/MarkDown%E7%BC%96%E8%BE%91%E5%99%A8%E4%B9%8BTypora.pdf"
+    );
     loadingTask.promise.then((pdfDocument) => {
-      viewer.setDocument(this.pdfDoc);
+      viewer.setDocument(pdfDocument);
     });
   },
   watch: {},
-  methods: {
-  },
+  methods: {},
 };
 </script>
 <template>
@@ -46,6 +44,7 @@ export default {
 .main {
   position: relative;
   overflow: auto;
+  height: 400px;
 
   #viewerContainer {
     position: absolute;
