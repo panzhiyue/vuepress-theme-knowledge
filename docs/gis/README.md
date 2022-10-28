@@ -18,6 +18,8 @@ demo数据下载：https://blog.csdn.net/weixin_34072159/article/details/9338821
 
 全球地理信息资源目录服务系统：https://www.webmap.cn/main.do?method=index
 
+零基础入门GIS开发课程及资料：https://zhuanlan.zhihu.com/p/567468114
+
 ## 数据格式
 
 ### geojson

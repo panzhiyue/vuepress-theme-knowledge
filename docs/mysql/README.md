@@ -331,5 +331,8 @@ select ST_ASTEXT(SHAPE) FROM test_geometry
 
 ![img](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/img/202208011015155.png)
 
- 
+###  4.空间函数一些注意事项
 
+1 目前MySQL中支持的空间坐标系统没有gcj02,bd09等国内坐标系，默认使用WGS84地球坐标系，所以在创建几何对象时输入的坐标值尽量使用WGS84坐标，以避免误差。
+
+2 MySQL中的计算距离，长度，面积等绝对数值的空间计算函数(area(), GLength(), st_distance())存在一定的误差，尽量不要使用。
