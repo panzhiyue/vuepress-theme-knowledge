@@ -20,6 +20,8 @@ demo数据下载：https://blog.csdn.net/weixin_34072159/article/details/9338821
 
 零基础入门GIS开发课程及资料：https://zhuanlan.zhihu.com/p/567468114
 
+gis思维博客:https://blog.csdn.net/kinghxj?type=blog
+
 ## 数据格式
 
 ### geojson
@@ -27,6 +29,8 @@ demo数据下载：https://blog.csdn.net/weixin_34072159/article/details/9338821
 #### 参考资料
 
 https://www.oschina.net/translate/geojson-spec
+
+https://www.rfc-editor.org/rfc/rfc7946
 
 #### 简介
 

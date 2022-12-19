@@ -202,3 +202,77 @@ array.fill(value, start, end)
 
 ```
 
+## 扩展
+
+### 删除数组中的重复项
+
+**1. 此方法只适合删除相邻的重复元素（记得下标减1）**
+
+```javascript
+var array = [2, 3, 3, 5, 7, 7, 7, 9]
+for(let i = 0;i < array.length; i++){
+	if(array[i] == array[i+1]){
+		array.splice(i,1)
+		i--
+	}
+}
+console.log(array)
+```
+
+**2. 定义一个额外数组**
+
+```javascript
+// 创建一个新的数组
+let array = [2, 3, 1, 5, 7, 3, 7, 9]
+let arr = []
+array.forEach(element => {
+  if (arr.indexOf(element) === -1) {
+    arr.push(element)
+  }
+})
+console.log(arr)
+```
+
+**3. 不增加额外数组**
+
+```javascript
+// 双向for循环，不增加额外数组 T=O(n2)
+let array = [2, 3, 1, 5, 7, 3, 7, 9]
+for (let i = 0; i < array.length; i++) {
+  for (let j = i + 1; j < array.length; j++) {
+    if (array[j] === array[i])
+      array.splice(j, 1)
+  }
+}
+console.log(array)
+```
+
+**4. ES6–Set方法**
+
+```javascript
+// 使用Set
+let array = [2, 3, 1, 5, 7, 3, 7, 9]
+let arr = []
+let set = new Set
+array.forEach(element =>
+  arr = [...set.add(element)]
+)
+console.log(arr)
+```
+
+**5. ES6–Map方法**
+
+```javascript
+// 使用Map
+let array = [2, 3, 1, 5, 7, 3, 7, 9]
+let arr = []
+let map = new Map
+array.forEach(element => {
+  if (!map.has(element)) {
+    map.set(element, element)
+    arr.push(element)
+  }
+})
+console.log(arr)
+```
+
