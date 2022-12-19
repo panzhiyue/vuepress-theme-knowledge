@@ -192,7 +192,7 @@ npm install --global yarn
 
 ### 使用
 
-现在Yarn已经 [安装](https://www.bookstack.cn/read/yarn-cn/1.md)完毕，可以开始使用。以下是一些你需要的最常用的命令：
+现在Yarn已经 [安装](#安装)完毕，可以开始使用。以下是一些你需要的最常用的命令：
 
 **初始化新项目**
 
@@ -301,7 +301,7 @@ license (MIT):
 
 你需要了解几若干个用于增加、更新、删除依赖项的命令。
 
-每个命令都会更新[`package.json`](https://www.bookstack.cn/read/yarn-cn/57.md)和[`yarn.lock`](https://www.bookstack.cn/read/yarn-cn/60.md) 文件。
+每个命令都会更新[`package.json`](#package.json)和[`yarn.lock`](#yarn.lock) 文件。
 
 #### 添加依赖包
 
@@ -322,12 +322,12 @@ yarn add [package]
   }
 ```
 
-你可以用以下参数添加其它[类型](https://www.bookstack.cn/read/yarn-cn/53.md)的依赖：
+你可以用以下参数添加其它[类型](#依赖的类型)的依赖：
 
 - `yarn add —dev` 添加到 `devDependencies`
 - `yarn add —peer` 添加到 `peerDependencies`
 - `yarn add —optional` 添加到 `optionalDependencies`
-  通过指定[依赖版本](https://www.bookstack.cn/read/yarn-cn/54.md)和[标签](https://www.bookstack.cn/read/yarn-cn/39.md)，你可以安装一个特定版本的包：
+  通过指定[依赖版本](#依赖的版本)和[标签](#yarn tag)，你可以安装一个特定版本的包：
 
 ```bash
 yarn add [package]@[version]
@@ -384,13 +384,13 @@ yarn remove [package]
 
 ### 安装依赖项
 
-如果刚从[版本控制系统](https://www.bookstack.cn/read/yarn-cn/7.md)里 checkout 一个包，则需要为其安装依赖。
+如果刚从[版本控制系统](#配合版本控制)里 checkout 一个包，则需要为其安装依赖。
 
 > 如果是为现有的包[增加依赖](https://yarnpkg.com/zh-Hans/docs/managing-dependencies#toc-adding-a-dependency)，那么这些新的依赖会自动安装。
 
 #### 安装依赖项
 
-[`yarn install`](https://www.bookstack.cn/read/yarn-cn/24.md) 是用于安装一个项目的所有依赖。 Yarn会从`package.json`中读取依赖，并将依赖信息存储到`yarn.lock`中。
+[`yarn install`](#yarn install) 是用于安装一个项目的所有依赖。 Yarn会从`package.json`中读取依赖，并将依赖信息存储到`yarn.lock`中。
 
 如果你正在开发一个包，通常你会在以下情况之后进行依赖安装：
 
@@ -405,7 +405,7 @@ yarn remove [package]
 - 安装一个包的单一版本：`yarn install —flat`
 - 强制重新下载所有包：`yarn install —force`
 - 只安装生产环境依赖：`yarn install —production`
-  查看您可以传递给 `yarn install` 的 [完整参数列表](https://www.bookstack.cn/read/yarn-cn/24.md)。
+  查看您可以传递给 `yarn install` 的 [完整参数列表](#yarn install)。
 
 ### 配合版本控制
 
@@ -425,7 +425,12 @@ yarn remove [package]
 
 Yarn 很容易在许多持续构建系统中使用。为了加速构建，Yarn 缓存目录可以跨构建保存起来。
 
-[AppVeyor](https://www.bookstack.cn/read/yarn-cn/8.md#appveyor)[CircleCI](https://www.bookstack.cn/read/yarn-cn/8.md#circle)[Codeship](https://www.bookstack.cn/read/yarn-cn/8.md#codeship)[Travis](https://www.bookstack.cn/read/yarn-cn/8.md#travis)[Semaphore](https://www.bookstack.cn/read/yarn-cn/8.md#semaphore)[Solano](https://www.bookstack.cn/read/yarn-cn/8.md#solano)
+AppVeyor
+CircleCI
+Codeship
+Travis
+Semaphore
+Solano
 
 从上面的选项中选择您正在使用持续集成系统
 
@@ -555,7 +560,7 @@ yarn add      添加依赖
 
 - `yarn add package-name` 会安装 latest 最新版本。
 - `yarn add package-name@1.2.3` 会从 registry 里安装这个包的指定版本。
-- `yarn add package-name@tag` 会安装某个 [“tag”](https://www.bookstack.cn/read/yarn-cn/39.md) 标识的版本（比如 `beta`、`next` 或者 `latest`）。
+- `yarn add package-name@tag` 会安装某个 [“tag”](#yarn tag) 标识的版本（比如 `beta`、`next` 或者 `latest`）。
   你也可以指定不同路径的包：
 - `yarn add package-name` 从 [npm registry](https://www.npmjs.com/) 里安装包，除非你在 `package.json` 指定了其它 registry。
 - `yarn add file:/path/to/local/folder` 从本地文件系统里安装一个包，可以用这种方式来测试还未发布的包。
@@ -570,7 +575,7 @@ yarn add      添加依赖
 
 对于绝大部分包来说，这是个坏习惯，因为它们是隐藏的。 最好本地安装你的依赖，这样它们都是明确的，每用你项目的人都能得到同样的依赖。
 
-如果你想用有 `bin` 的命令行 CLI 工具，可以在 `./node_modules/.bin` 路径里访问。 你也可以用 [`global`](https://www.bookstack.cn/read/yarn-cn/19.md) 命令：
+如果你想用有 `bin` 的命令行 CLI 工具，可以在 `./node_modules/.bin` 路径里访问。 你也可以用 [`global`](#yarn global) 命令：
 
 ```bash
  yarn global add <package...>
@@ -658,7 +663,7 @@ You decide all YAML and Markdown files in all your dependencies installed in `no
 yarn bin
 ```
 
-`yarn bin` 将打印 yarn 将把你的包里可执行文件安装到的目录。 一个可执行文件的例子也许是一个你定义在你的包里的，可以通过 [`yarn run`](https://www.bookstack.cn/read/yarn-cn/37.md) 可执行脚本。
+`yarn bin` 将打印 yarn 将把你的包里可执行文件安装到的目录。 一个可执行文件的例子也许是一个你定义在你的包里的，可以通过 [`yarn run`](#yarn run) 可执行脚本。
 
 ### yarn cache 
 
@@ -852,12 +857,12 @@ $ create-react-app
 
 阅读更多可以和 `yarn global` 一起用的命令：
 
-- [`yarn add`](https://www.bookstack.cn/read/yarn-cn/10.md): 添加一个包用在你当前的项目里。
-- [`yarn bin`](https://www.bookstack.cn/read/yarn-cn/12.md): 显示 yarn bin 目录的位置。
-- [`yarn list`](https://www.bookstack.cn/read/yarn-cn/27.md): 列出已安装的包。
-- [`yarn remove`](https://www.bookstack.cn/read/yarn-cn/36.md): 从你当前包里移除一个不再使用的包。
-- [`yarn upgrade`](https://www.bookstack.cn/read/yarn-cn/43.md): upgrade packages to their latest version based on the specified range.
-- [`yarn upgrade-interactive`](https://www.bookstack.cn/read/yarn-cn/44.md): similar to `upgrade` command, but display the outdated packages before performing any upgrade, allowing the user to select which packages to upgrade.
+- [`yarn add`](#yarn add): 添加一个包用在你当前的项目里。
+- [`yarn bin`](#yarn bin): 显示 yarn bin 目录的位置。
+- [`yarn list`](#yarn list): 列出已安装的包。
+- [`yarn remove`](#yarn remove): 从你当前包里移除一个不再使用的包。
+- [`yarn upgrade`](#yarn upgrade): upgrade packages to their latest version based on the specified range.
+- [`yarn upgrade-interactive`](#yarn upgrade-interactive): similar to `upgrade` command, but display the outdated packages before performing any upgrade, allowing the user to select which packages to upgrade.
 
 ### yarn helper
 
@@ -1082,7 +1087,7 @@ $ yarn init
 
 #### 为 yarn init 设置默认值
 
-下面的 [config](https://www.bookstack.cn/read/yarn-cn/15.md) 变量可被用于自定义 `yarn init` 的默认值：
+下面的 [config](#yarn config) 变量可被用于自定义 `yarn init` 的默认值：
 
 - `init-author-name`
 - `init-author-email`
@@ -1185,7 +1190,7 @@ success Saved package.json
 
 `yarn install`用于安装一个项目的所有依赖。 这个命令最常见的使用场景是在你刚Check out一份项目代码之后，或者在你需要使用其他开发者新增加的项目依赖的时候。
 
-如果习惯使用 npm， 你可能希望使用 `—save` 或 `—save-dev`， 这些已经被 `yarn add` 和 `yarn add —dev` 所取代。 更多信息，请参阅 [`yarn add` 文档](https://www.bookstack.cn/read/yarn-cn/10.md)。
+如果习惯使用 npm， 你可能希望使用 `—save` 或 `—save-dev`， 这些已经被 `yarn add` 和 `yarn add —dev` 所取代。 更多信息，请参阅 [`yarn add` 文档](#yarn add)。
 
 执行不带任何命令的`yarn`，等同于执行`yarn install`，并透传所有参数。
 
@@ -1363,7 +1368,7 @@ success Registered "react".
 
 要逆转这个过程，只需使用 `yarn unlink` 或 `yarn unlink [package]`。另请参见：
 
-- [`yarn unlink`](https://www.bookstack.cn/read/yarn-cn/42.md): 取消已链接的包。
+- [`yarn unlink`](#yarn unlink): 取消已链接的包。
 
 ### yarn list
 
@@ -1417,7 +1422,7 @@ yarn list --pattern "gulp|grunt" --depth=1
 
 ##### yarn login
 
-运行此命令会提示你输入你 [npm registry](https://www.npmjs.com/) 的用户名和 email。 它**不会**要求你提供密码。 之后当你运行像 [`yarn publish`](https://www.bookstack.cn/read/yarn-cn/35.md) 这样的命令请求验证时，你必须输入密码才能做。
+运行此命令会提示你输入你 [npm registry](https://www.npmjs.com/) 的用户名和 email。 它**不会**要求你提供密码。 之后当你运行像 [`yarn publish`](#yarn publish) 这样的命令请求验证时，你必须输入密码才能做。
 
 ```bash
 yarn login
@@ -1430,7 +1435,7 @@ question npm email: my-username@example.com
 ✨  Done in 6.03s.
 ```
 
-使用 [`yarn logout`](https://www.bookstack.cn/read/yarn-cn/30.md) 你可以删除你的用户名和 email。
+使用 [`yarn logout`](#yarn logout) 你可以删除你的用户名和 email。
 
 ### yarn logout
 
@@ -1438,7 +1443,7 @@ question npm email: my-username@example.com
 
 #### yarn logout
 
-这将移除你用 [`yarn login`](https://www.bookstack.cn/read/yarn-cn/29.md) 保存给 [npm registry](https://www.npmjs.com/) 的用户名和 email。 你需要运行这个来解除认证，registry actions 单独认证。
+这将移除你用 [`yarn login`](#yarn login) 保存给 [npm registry](https://www.npmjs.com/) 的用户名和 email。 你需要运行这个来解除认证，registry actions 单独认证。
 
 ### yarn outdated
 
@@ -1590,7 +1595,7 @@ lodash  4.15.0  4.15.0 4.16.4 devDependencies https://github.com/lodash/lodash#r
 
 运行一个定义好的包脚本。
 
-你可以在你的 [`package.json`](https://www.bookstack.cn/read/yarn-cn/57.md) 文件中定义 [`scripts`](https://yarnpkg.com/zh-Hans/docs/package-json#toc-scripts)。
+你可以在你的 [`package.json`](#package.json) 文件中定义 [`scripts`](https://yarnpkg.com/zh-Hans/docs/package-json#toc-scripts)。
 
 ```json
 {
@@ -1797,7 +1802,7 @@ Hello, world!
 
 取消一个以前创建的包符号链接。
 
-要移除一个使用 [`yarn link`](https://www.bookstack.cn/read/yarn-cn/26.md) 创建的符号链接的包，可以使用 `yarn unlink`。
+要移除一个使用 [`yarn link`](#yarn link) 创建的符号链接的包，可以使用 `yarn unlink`。
 
 #### yarn unlink
 
@@ -1825,7 +1830,7 @@ success Unregistered "react".
 
 另请参见：
 
-- [`yarn link`](https://www.bookstack.cn/read/yarn-cn/26.md): 在本地开发环境里符号链接一个包。
+- [`yarn link`](#yarn link): 在本地开发环境里符号链接一个包。
 
 ### yarn upgrade
 
@@ -2146,7 +2151,7 @@ Yarn将通过自己的解析算法来重新组织`node_modules` 目录，这个�
 
 大部分的包都使用了版本控制系统，最常见的是git。但 Yarn 对此并不做要求，你可随意选择。本指南以git为例。
 
-> **注意：** 如果打算照着本指南实践，请先安装 [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 和 [Yarn](https://www.bookstack.cn/read/yarn-cn/1.md)。
+> **注意：** 如果打算照着本指南实践，请先安装 [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 和 [Yarn](#安装)。
 
 ### 创建你的第一个包
 
@@ -2232,7 +2237,7 @@ license (MIT):
 - **contributors** 是包的贡献者列表，如果有别人参与你的项目，你可以在这里指明。
 - **files** 是包发布和安装时应该包含的文件列表，如果不指定，Yarn 会列出项目中的所有文件。
 - **bin** 是一个让 Yarn 在包安装时给包创建 cli 命令（二进制）的映射表。
-  要得到 `package.json` 所有字段以及上面那些字段的更详细信息，请参阅 [`package.json` 文档](https://www.bookstack.cn/read/yarn-cn/57.md)。
+  要得到 `package.json` 所有字段以及上面那些字段的更详细信息，请参阅 [`package.json` 文档](#package.json)。
 
 ### 许可证和开源
 
