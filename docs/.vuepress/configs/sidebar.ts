@@ -10,7 +10,15 @@ export const sidebar: SidebarConfig = {
     '/第三方地图/': resolveDir(resolve(__dirname, "../../第三方地图/")),
     '/nodejs/': resolveDir(resolve(__dirname, "../../nodejs/")),
     '/windows/': resolveDir(resolve(__dirname, "../../windows/")),
-    '/css/': resolveDir(resolve(__dirname, "../../css/"), [/examples/]),
+    '/css/': resolveDir(resolve(__dirname, "../../css/"), [/examples/]).concat([{
+        text:"链接",
+        children:[
+            {
+                text:"You-need-to-know-css",
+                link:"https://lhammer.cn/You-need-to-know-css/#/zh-cn/double-wing-layout?v=1"
+            }
+        ]
+    }]),
     '/mongodb/': resolveDir(resolve(__dirname, "../../mongodb/")),
     '/mysql/': resolveDir(resolve(__dirname, "../../mysql/")),
     '/sqlserver/': resolveDir(resolve(__dirname, "../../sqlserver/")),
@@ -32,7 +40,6 @@ export const sidebar: SidebarConfig = {
     '/gitbook/': resolveDir(resolve(__dirname, "../../gitbook/")),
     '/hexo/': resolveDir(resolve(__dirname, "../../hexo/")),
     '/html/': resolveDir(resolve(__dirname, "../../html/")),
-    '/java/': resolveDir(resolve(__dirname, "../../java/")),
     '/jsdoc/': resolveDir(resolve(__dirname, "../../jsdoc/")),
     '/Mac/': resolveDir(resolve(__dirname, "../../Mac/")),
     '/MapBox/': resolveDir(resolve(__dirname, "../../MapBox/")),
