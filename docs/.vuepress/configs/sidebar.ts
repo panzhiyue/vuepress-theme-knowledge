@@ -10,19 +10,7 @@ export const sidebar: SidebarConfig = {
     '/第三方地图/': resolveDir(resolve(__dirname, "../../第三方地图/")),
     '/nodejs/': resolveDir(resolve(__dirname, "../../nodejs/")),
     '/windows/': resolveDir(resolve(__dirname, "../../windows/")),
-    '/css/': resolveDir(resolve(__dirname, "../../css/"), [/examples/]).concat([{
-        text:"链接",
-        children:[
-            {
-                text:"You-need-to-know-css",
-                link:"https://lhammer.cn/You-need-to-know-css/#/zh-cn/double-wing-layout?v=1"
-            },
-            {
-                text:"Flexbox演示站",
-                link:"https://xluos.github.io/demo/flexbox/"
-            }
-        ]
-    }]),
+    '/css/': resolveDir(resolve(__dirname, "../../css/"), [/examples/]).concat([]),
     '/mongodb/': resolveDir(resolve(__dirname, "../../mongodb/")),
     '/mysql/': resolveDir(resolve(__dirname, "../../mysql/")),
     '/sqlserver/': resolveDir(resolve(__dirname, "../../sqlserver/")),
