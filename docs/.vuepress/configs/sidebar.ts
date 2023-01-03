@@ -16,6 +16,10 @@ export const sidebar: SidebarConfig = {
             {
                 text:"You-need-to-know-css",
                 link:"https://lhammer.cn/You-need-to-know-css/#/zh-cn/double-wing-layout?v=1"
+            },
+            {
+                text:"Flexbox演示站",
+                link:"https://xluos.github.io/demo/flexbox/"
             }
         ]
     }]),
