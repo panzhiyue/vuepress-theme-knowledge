@@ -75,7 +75,7 @@ export default {
 
 #### `<script setup>`
 
-```javascript
+```vue
 <script lang="ts" setup>
 import { useVModel } from '@vueuse/core'
 
