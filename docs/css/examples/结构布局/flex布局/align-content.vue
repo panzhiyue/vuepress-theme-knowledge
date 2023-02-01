@@ -7,7 +7,7 @@
 			></span
 		>
 		<div class="container" :style="{ alignContent: alignContent }">
-			<div class="item" v-for="element in elements" >
+			<div class="item" v-for="element in elements" :style="{ height: 8 * element + 'px' }" >
 				{{ element }}
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 export default {
 	data() {
 		return {
-			elements: Array.from({ length: 21 }).map((value, index) => index + 1),
+			elements: Array.from({ length:10 }).map((value, index) => index + 1),
 			radios: ['flex-start', 'flex-end', 'center', 'space-between', 'space-around'],
 			alignContent: 'flex-start',
 		};
@@ -41,7 +41,6 @@ main {
 	height: 29px;
 	background: #b4a078;
 	border-radius: 5px;
-	margin: 12px;
 	margin-left: 0;
 	color: white;
 	text-align: center;

@@ -112,7 +112,7 @@ css/examples/结构布局/flex布局/justify-content
 
 ### align-items 属性
 
-**作用：** 定义项目在交叉轴（默认方向从上到下）上的对齐方式。
+**作用：** 定义项目在交叉轴上行内的对齐方式。
 
 ```css
 align-items: flex-start | flex-end | center | baseline | stretch;
@@ -272,3 +272,52 @@ align-self: auto | flex-start | flex-end | center | baseline | stretch;
 css/examples/结构布局/flex布局/align-self
 
 :::
+
+
+
+## align-items与align-centent的区别
+
+在初学flex时因为align-items与align-centent很多时候表现一致，导致这2个属性特别容易混淆，下面仔细分析一下这2个属性的区别
+
+### align-items
+
+定义项目在交叉轴上行内的对齐方式。
+
+在值为flex-start时展示效果如下图
+
+![image-20230130130444535](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230130130444535.png)
+
+在值为flex-end时展示效果如下图
+
+![image-20230130130615624](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230130130615624.png)
+
+在值为center时展示效果
+
+![image-20230130133613528](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230130133613528.png)
+
+
+
+### align-content
+
+定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+
+在值为flex-start时展示效果
+
+![image-20230130134303281](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230130134303281.png)
+
+在值为flex-end时展示效果
+
+![image-20230130134338325](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230130134338325.png)
+
+
+
+在值为space-between时展示效果
+
+![image-20230130134410746](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230130134410746.png)
+
+### 总结
+
+通过上面的效果图，我们可以很明显的看出
+
+- align-items会改变项目在行内的排列方式
+- align-centent会改变行在容器内的排列方式

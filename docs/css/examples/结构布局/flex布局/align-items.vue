@@ -17,7 +17,7 @@
 export default {
 	data() {
 		return {
-			elements: Array.from({ length: 5 }).map((value, index) => index + 1),
+			elements: Array.from({ length: 10 }).map((value, index) => index + 1),
 			radios: ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'],
 			alignItems: 'flex-start',
 		};
@@ -32,6 +32,7 @@ main {
 .container {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .item {
@@ -39,7 +40,7 @@ main {
 	height: 29px;
 	background: #b4a078;
 	border-radius: 5px;
-	margin: 12px;
+	
 	margin-left: 0;
 	color: white;
 	text-align: center;
