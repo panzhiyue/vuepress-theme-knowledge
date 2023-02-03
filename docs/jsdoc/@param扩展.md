@@ -41,3 +41,10 @@
 ```javascript
 @param {module:ol/Coordinate} coord 模块
 ```
+
+#### 其他类型
+
+```
+@param {HTMLElement} el html元素
+```
+
