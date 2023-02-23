@@ -38,6 +38,8 @@ export const sidebar: SidebarConfig = {
     '/MapGIS/': resolveDir(resolve(__dirname, "../../MapGIS/")),
     '/python/': resolveDir(resolve(__dirname, "../../python/")),
     '/TypeScript/': resolveDir(resolve(__dirname, "../../TypeScript/")),
-    '/Webpack/': resolveDir(resolve(__dirname, "../../Webpack/"))
+    '/Webpack/': resolveDir(resolve(__dirname, "../../Webpack/")),
+    '/考试/考公/': resolveDir(resolve(__dirname, "../../考试/考公/")),
+    '/考试/考编/': resolveDir(resolve(__dirname, "../../考试/考编/")),
 }
 

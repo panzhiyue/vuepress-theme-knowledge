@@ -53,10 +53,10 @@ export const navbar: NavbarConfig = [
             }, {
                 text: 'Geotools',
                 link: '/Geotools/'
-            },{
+            }, {
                 text: 'MapBox',
                 link: '/MapBox/'
-            },{
+            }, {
                 text: 'MapGIS',
                 link: '/MapGIS/'
             },
@@ -76,13 +76,13 @@ export const navbar: NavbarConfig = [
             {
                 text: 'js',
                 link: '/js/'
-            },    {
+            }, {
                 text: 'html',
                 link: '/html/'
-            },   {
+            }, {
                 text: 'TypeScript',
                 link: '/TypeScript/'
-            },  {
+            }, {
                 text: 'Webpack',
                 link: '/Webpack/'
             },
@@ -94,7 +94,7 @@ export const navbar: NavbarConfig = [
             {
                 text: 'windows',
                 link: '/windows/'
-            },{
+            }, {
                 text: 'Mac',
                 link: '/Mac/'
             },
@@ -166,14 +166,28 @@ export const navbar: NavbarConfig = [
             }, {
                 text: 'jsdoc',
                 link: '/jsdoc/'
-            },{
+            }, {
                 text: 'python',
                 link: '/python/'
-            },{
+            }, {
                 text: '文档语法',
                 link: '/文档语法/'
             },
         ],
     },
+    {
+        text: '考试',
+        children: [
+            {
+                text: '考公',
+                link: '/考试/考公'
+            },
+            {
+                text: '考编',
+                link: '/考试/考编'
+            },
+        ],
+
+    }
 
 ]
