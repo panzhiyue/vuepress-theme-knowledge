@@ -9,12 +9,16 @@ export const Catalog: FunctionalComponent<{
 }> = ({ headers, activeLink }): VNode => {
     const router = useRouter();
 
-  return h(
+  return h("div",     {
+    class: {
+        catalog: true
+    }
+}, h(
         "ul",
         {
-            class: {
-                catalog: true
-            }
+            // class: {
+            //     catalog: true
+            // }
         },
         headers.map((header) => {
             return h(
@@ -35,7 +39,7 @@ export const Catalog: FunctionalComponent<{
                 header.title
             );
         })
-    );
+    ));
 };
 
 Catalog.displayName = "Catalog";

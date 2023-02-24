@@ -8,9 +8,9 @@
     font-size: 14px;
     overflow-x: hidden;
     overflow-y: scroll;
-    top:80px;
     right: 5rem;
-
+    top: var(--navbar-height);
+    bottom: 0;
     @include hideScrollbar();
 
     &.fixed {
