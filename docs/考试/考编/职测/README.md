@@ -77,7 +77,7 @@
 
 
 
-![image-20230225183240041](README.assets/image-20230225183240041.png)
+![image-20230225183240041](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230225183240041.png)
 
 **2.数学运算（10）**
 
@@ -98,7 +98,7 @@
 - 考查类型丰富，题量大
 - 考查多为思考型问题，套路型题目考查较少
 
-![image-20230225183320324](README.assets/image-20230225183320324.png)
+![image-20230225183320324](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230225183320324.png)
 
 ##### （2）资料分析（10）
 
@@ -117,7 +117,7 @@
 - 基础题：提升题：超难题，6:3:1
 - 有一些题目需要回归到最基础的基础公式计算，讨巧题目考查较少，多公式结合题目较多
 
-![image-20230225183349766](README.assets/image-20230225183349766.png)
+![image-20230225183349766](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230225183349766.png)
 
 #### 2.备考指导
 
@@ -165,7 +165,7 @@
 
 
 
-![image-20230225185912620](README.assets/image-20230225185912620.png)
+![image-20230225185912620](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230225185912620.png)
 
 #### 2.备考建议
 
@@ -211,7 +211,7 @@
 
 
 
-![image-20230225191810096](README.assets/image-20230225191810096.png)
+![image-20230225191810096](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230225191810096.png)
 
-![image-20230225191927921](README.assets/image-20230225191927921.png)
+![image-20230225191927921](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230225191927921.png)
 
