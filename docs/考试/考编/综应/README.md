@@ -511,8 +511,6 @@
 - 判断观点（表态）方向 
 - 判断主要写作内容
 
-
-
 - 主题
   - 短文、短评，典型的评论类公文，此处直接给出了标题，去掉双引号直接 摘抄即可
 - 观点
@@ -553,6 +551,14 @@
 ![image-20230314113636602](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230314113636602.png)
 
 ![image-20230314113647585](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230314113647585.png)
+
+### （3）总结
+
+#### 1.简报范文
+
+https://spa.fenbi.com/shenlun/report/zhyynl/1470111787
+
+![image-20230328205032290](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230328205032290.png)
 
 ## 四、材料作文（指定文体）
 
