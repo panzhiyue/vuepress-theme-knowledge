@@ -936,14 +936,58 @@ https://spa.fenbi.com/shenlun/report/zhyynl/1475303356
   - 理证：谈影响，细化对策，谈影响时可以从主体展开，可以从正反两个角 度谈影响，细化对策时可以按照主体和角度展开。
   - 例证和理证可以融合使用，之后可以进一步分析，即原因+问题+影响+对 策。
 
+#### 观点句怎么写
+
+![image-20230330200608445](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330200608445.png)
+
+![image-20230330200941243](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330200941243.png)
+
+![image-20230330201450235](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330201450235.png)
+
+#### 标题怎么写
+
+![image-20230330202542781](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330202542781.png)
+
+#### 开头怎么写
+
+![image-20230330202902333](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330202902333.png)
+
+![image-20230330203802390](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330203802390.png)
+
+![image-20230330204126287](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330204126287.png)
+
+#### 论证怎么写
+
+![image-20230330205343433](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330205343433.png)
+
+![image-20230330211925172](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330211925172.png)
+
+![image-20230330212228176](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330212228176.png)
+
+![image-20230330212451672](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330212451672.png)
+
+#### 结尾怎么写
+
+![image-20230330212701034](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330212701034.png)
+
+![image-20230330212829358](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330212829358.png)
+
 ## 语言提分技巧
 
 - 短词短句
 - 对称句（关键位置）
 
+![image-20230330213627686](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330213627686.png)
 
+## 浙江素材
 
+![image-20230330212918371](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330212918371.png)
 
+![image-20230330212944379](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330212944379.png)
+
+![image-20230330214611332](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330214611332.png)
+
+![image-20230330215252305](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330215252305.png)
 
 
 
@@ -1077,7 +1121,7 @@ http://www.yiwenmi.cn/shiji/20154.html
 
 咬定青山不放松的精神含义:顽强不屈、努力拼搏的精神
 
-
+![image-20230330214438323](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230330214438323.png)
 
 ## 论点论据论证
 
