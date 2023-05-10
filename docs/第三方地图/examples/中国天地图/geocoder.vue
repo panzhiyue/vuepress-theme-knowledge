@@ -81,7 +81,7 @@ export default {
 		geocoder_callback(data) {
 			//地理编码结果数组
 			var geocode = data.location;
-
+			this.clearMarker();
 			this.addMarker(geocode.lon, geocode.lat);
 			this.map.getView().fit(new Point([geocode.lon, geocode.lat]), {
 				duration: 1500,
