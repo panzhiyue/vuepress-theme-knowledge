@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<div style="z-index: 9000">
+			<input type="text" v-model="coorText" />
 			<input type="text" v-model="address" />
 			<input type="button" style="z-index: 1000" @click="geocoder" value="确定" />
-			<!-- <BUtton type="private"></BUtton> -->
 		</div>
 		<div id="mapContainer" ref="mapDom" style="position: relative; height: 400px; z-index: 0"></div>
 	</div>
@@ -28,7 +28,26 @@ export default {
 			map: null, //地图实例
 			tk: 'effe820039ecd2ea7e1e2f28f47fe29d',
 			vectorLayer: null,
+			coorText: '120,28',
+			isCenter: false,
 		};
+	},
+	computed: {
+		coor() {
+			if (this.coorText.includes(',')) {
+				return [parseFloat(this.coorText.split(',')[0]), parseFloat(this.coorText.split(',')[1])];
+			}
+			return null;
+		},
+	},
+	watch: {
+		coor() {
+			this.clearMarker();
+			this.addMarker(this.coor[0], this.coor[1]);
+			if (this.isCenter) {
+				this.map.getView().setCenter(this.coor);
+			}
+		},
 	},
 	mounted() {
 		this.map = new Map({
@@ -66,6 +85,20 @@ export default {
 			source: new VectorSource(),
 		});
 		this.map.addLayer(this.vectorLayer);
+
+		this.map.on('singleclick', (evt) => {
+			console.log(evt);
+			let pixel = this.map.getEventPixel(evt.originalEvent);
+			let coor = this.map.getCoordinateFromPixel(pixel);
+			this.coorText = coor[0].toFixed(8) + ',' + coor[1].toFixed(8);
+		});
+
+		if (this.coor) {
+			this.addMarker(this.coor[0], this.coor[1]);
+			this.map.getView().fit(new Point(this.coor), {
+				maxZoom: 12,
+			});
+		}
 	},
 	methods: {
 		async geocoder() {
@@ -81,8 +114,8 @@ export default {
 		geocoder_callback(data) {
 			//地理编码结果数组
 			var geocode = data.location;
-			this.clearMarker();
-			this.addMarker(geocode.lon, geocode.lat);
+			// this.clearMarker();
+			// this.addMarker(geocode.lon, geocode.lat);
 			this.map.getView().fit(new Point([geocode.lon, geocode.lat]), {
 				duration: 1500,
 				maxZoom: 12,
