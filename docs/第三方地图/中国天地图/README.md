@@ -31,3 +31,9 @@ http://t0.tianditu.gov.cn/${layer}_w/wmts?layer=${layer}&style=default&tilematri
 - layer：矢量地图:vec,矢量注记:cva,矢量英文注记:eva,影像地图:img,影像注记:cia,影像英文注记:eia,地形地图:ter,地形注记:cta,全球境界:ibo
 - tk：秘钥
 
+### 3.地理编码解析
+::: demo
+
+第三方地图/examples/中国天地图/geocoder
+
+:::
