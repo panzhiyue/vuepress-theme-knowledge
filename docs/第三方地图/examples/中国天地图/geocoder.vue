@@ -29,7 +29,7 @@ export default {
 			tk: 'effe820039ecd2ea7e1e2f28f47fe29d',
 			vectorLayer: null,
 			coorText: '120,28',
-			isCenter: false,
+			isCenter: true,
 		};
 	},
 	computed: {
@@ -43,9 +43,11 @@ export default {
 	watch: {
 		coor() {
 			this.clearMarker();
-			this.addMarker(this.coor[0], this.coor[1]);
-			if (this.isCenter) {
-				this.map.getView().setCenter(this.coor);
+			if (this.coor) {
+				this.addMarker(this.coor[0], this.coor[1]);
+				if (this.isCenter) {
+					this.map.getView().setCenter(this.coor);
+				}
 			}
 		},
 	},
@@ -114,8 +116,6 @@ export default {
 		geocoder_callback(data) {
 			//地理编码结果数组
 			var geocode = data.location;
-			// this.clearMarker();
-			// this.addMarker(geocode.lon, geocode.lat);
 			this.map.getView().fit(new Point([geocode.lon, geocode.lat]), {
 				duration: 1500,
 				maxZoom: 12,
