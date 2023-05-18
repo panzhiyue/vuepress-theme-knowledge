@@ -7,7 +7,7 @@ remote 模块提供了一种在渲染进程（网页）和主进程之间进行�
 ## 安装
 
 ```
-yarn add electron/remote
+yarn add @electron/remote
 ```
 
 ## 使用
@@ -27,7 +27,7 @@ async function createWindow() {
 
 
 
-**在渲染进程中**
+**在渲染进程中使用**
 
 ```javascript
 const remote = require("@electron/remote") //1 
@@ -40,3 +40,48 @@ win.loadURL(path.join('file:',__dirname,'news.html'));
 win.on('close',()=>{win = null})
 ```
 
+## API
+
+```javascript
+const {BrowserWindow,app,getCurrentWindow,getCurrentWebContents,getGlobal,process } = require ( '@electron/remote' )
+```
+
+
+
+### BrowserWindow
+
+创建窗口
+
+```javascript
+const { BrowserWindow } = require('@electron/remote')
+let win = new BrowserWindow({ width: 800, height: 600 })
+win.loadURL('https://github.com')
+```
+
+
+
+### app 
+
+### getCurrentWindow()
+
+返回 BrowserWindow - 此网页所属的窗口。
+
+注意：不要在 BrowserWindow 上使用 removeAllListeners。 使用它可以删除所有模糊侦听器、禁用触摸栏按钮上的点击事件以及其他意想不到的后果。
+
+### getCurrentWebContents()
+
+返回 WebContents - 此网页的内容。
+
+### getGlobal(name)
+
+返回 any - 主进程中 name 的全局变量（例如 global[name]）。
+
+### process
+
+一个 NodeJS.Process 对象。 主进程中的进程对象。 这与 remote.getGlobal('process') 相同，但被缓存。
+
+### withRendererCallback 
+
+### withLocalCallback 
+
+### require(module)
