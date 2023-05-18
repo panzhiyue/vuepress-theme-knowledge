@@ -299,6 +299,12 @@
 
 ![image-20230326142446088](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230326142446088.png)
 
+
+
+### （三）总结
+
+![image-20230516184502751](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230516184502751.png)
+
 ## 三、公文（指定文种）
 
 ### （一）基础
@@ -584,7 +590,7 @@ https://spa.fenbi.com/shenlun/report/zhyynl/1475303356
 
 
 
-
+![image-20230516191241567](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230516191241567.png)
 
 ## 四、材料作文（指定文体）
 
