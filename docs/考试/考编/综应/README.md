@@ -1,4 +1,4 @@
-
+ 
 
 # 综应
 
@@ -624,6 +624,18 @@ https://spa.fenbi.com/shenlun/report/zhyynl/1475303356
 
 在实际考试中，考生找准主题后，可以从阐释含义，分析原因、意义或危害，提出对策等角度切入展开主题。围绕一个特定主题，从关系、问题、原因、意义、危害、对策等角度提出观点，并结合材料内容和社会实际展开论述。
 
+
+
+开头
+
+意义
+
+问题
+
+对策
+
+结尾
+
 ### （一）社会现象类（重点复习）
 
 #### 1.概述
@@ -671,9 +683,11 @@ https://spa.fenbi.com/shenlun/report/zhyynl/1475303356
 
 
 
+![image-20230706210612667](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706210612667.png)
 
+![image-20230706210636088](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706210636088.png)
 
-
+![image-20230706210811057](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706210811057.png)
 
 ### 考情介绍
 
