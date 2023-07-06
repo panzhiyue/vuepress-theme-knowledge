@@ -915,11 +915,12 @@ https://spa.fenbi.com/shenlun/report/zhyynl/1475303356
     - 捡拾最近新闻，从……到……再到……，不难发现……
     - 翻开报章，从……到……；从……到……；
     - 从……到……再到……，在深水区改革的宏大历史叙事中，……始终是其备 受关注的重要篇章。
-
+- ![image-20230706214109373](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706214109373.png)
+  
 - 背景引入
   - 比如材料中有很好的理论政策，如某人的讲话、发言等，可以摘抄放在开头，或者说明主题当下的社会形势，也可以把主题的重要性进行概括 放在开头，可以使用材料中的，也可以使用材料外的理解
 
-
+![image-20230706214314744](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706214314744.png)
 
 
 #### 6.论证的结构与方法
@@ -946,10 +947,14 @@ https://spa.fenbi.com/shenlun/report/zhyynl/1475303356
   - 使用道理：分析影响，细化对策
   - 分析影响的角度
     - 有小到大
+      - ![image-20230706220101035](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706220101035.png)
     - 正反两个方面进行分析
+      - ![image-20230706220126872](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706220126872.png)
   - 对策分析的角度
     - 多主体（政府，群众，企业，社会力量）
+      - ![image-20230706220252337](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706220252337.png)
     - 多角度细化（思想，行动，制度，管理，宣传，联合等）
+      - ![image-20230706220328483](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706220328483.png)
 
 - 过渡段（建议写问题）
 
@@ -963,11 +968,12 @@ https://spa.fenbi.com/shenlun/report/zhyynl/1475303356
 
   - 总结式
     - 进行总结，使用同义表述重复分论点后回扣主题。
-
+  - ![image-20230706220746596](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706220746596.png)
   - 展望式（立足现在，放眼未来）
-
+  - ![image-20230706220819032](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706220819032.png)
   - 呼吁号召式
     - 使用“让我们……啊、吧、啦”的句式，让结尾 有感染力。
+    - ![image-20230706220844753](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706220844753.png)
 
 - 注意
 
