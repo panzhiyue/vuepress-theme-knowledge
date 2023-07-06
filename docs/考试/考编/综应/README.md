@@ -897,12 +897,17 @@ https://spa.fenbi.com/shenlun/report/zhyynl/1475303356
     - 一方面……但另一方面……
     - 硬币常有两面，……亦是如此，一面……另一面……
 
+  ![image-20230706213826222](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706213826222.png)
+  
 - 概念法
   - 主题抽象时，开头先进行解释，下定义
   - 常用表达
     - 所谓……，是指……
     - ……，意思是……
     - 什么是……？它通常指的是……
+
+  ![image-20230706213751145](https://pzy-images.oss-cn-hangzhou.aliyuncs.com/image-20230706213751145.png)
+  
 
 - 事例法
   - 开头列举例子，可以使用人物事迹、政策、事件等通过串联的方式引出主 题。
