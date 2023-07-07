@@ -26,7 +26,7 @@ http://gisserver.tianditu.gov.cn/TDTService/wfs?service=WFS&version=1.0.0&reques
 
    1.2. LRDL 
 
-http://gisserver.tianditu.gov.cn/TDTService/wfs?service=WFS&version=1.0.0&request=GetFeature&typename=LRRL&outputFormat=SHAPE-ZIP
+http://gisserver.tianditu.gov.cn/TDTService/wfs?service=WFS&version=1.0.0&request=GetFeature&typename=LRDL&outputFormat=SHAPE-ZIP
 
 2. 水系线
 
