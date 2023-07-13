@@ -175,19 +175,19 @@ export const navbar: NavbarConfig = [
             },
         ],
     },
-    {
-        text: '考试',
-        children: [
-            {
-                text: '考公',
-                link: '/考试/考公'
-            },
-            {
-                text: '考编',
-                link: '/考试/考编'
-            },
-        ],
+    // {
+    //     text: '考试',
+    //     children: [
+    //         {
+    //             text: '考公',
+    //             link: '/考试/考公'
+    //         },
+    //         {
+    //             text: '考编',
+    //             link: '/考试/考编'
+    //         },
+    //     ],
 
-    }
+    // }
 
 ]

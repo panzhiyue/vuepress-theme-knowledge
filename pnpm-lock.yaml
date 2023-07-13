@@ -55,8 +55,9 @@ importers:
     specifiers:
       '@amap/amap-jsapi-loader': ^1.0.1
       '@esbuild-plugins/node-globals-polyfill': ^0.1.1
-      '@gis-js/vue2ol': 1.0.0-alpha.27
-      '@gis-js/vue2ol-extend': 1.0.0-alpha.27
+      '@gis-js/utilsol': ^1.0.4
+      '@gis-js/vue2ol': 1.0.2
+      '@gis-js/vue2ol-extend': 1.0.2
       '@originjs/vite-plugin-commonjs': ^1.0.3
       '@panzhiyue/vuepress-plugin-demo-block': workspace:*
       '@panzhiyue/vuepress-theme-knowledge': workspace:*
@@ -96,8 +97,9 @@ importers:
     dependencies:
       '@amap/amap-jsapi-loader': 1.0.1
       '@esbuild-plugins/node-globals-polyfill': 0.1.1
-      '@gis-js/vue2ol': 1.0.0-alpha.27
-      '@gis-js/vue2ol-extend': 1.0.0-alpha.27
+      '@gis-js/utilsol': 1.0.4
+      '@gis-js/vue2ol': 1.0.2
+      '@gis-js/vue2ol-extend': 1.0.2
       '@originjs/vite-plugin-commonjs': 1.0.3
       '@panzhiyue/vuepress-plugin-demo-block': link:../packages/plugins/demo-block
       '@panzhiyue/vuepress-theme-knowledge': link:../packages/theme
@@ -1557,9 +1559,14 @@ packages:
       - supports-color
     dev: true
 
-  /@gis-js/utilsol/1.0.0-alpha.27:
-    resolution: {integrity: sha512-vuXgNA97kC7Wr++aizQ8NeIepOiFiqLtRhJ6Y4st8BSq8Oekl+T6KB3U/x6StfDnY5KbDo/hHPFqTwg1aHS6DA==}
+  /@gis-js/geojson2shp/1.0.1:
+    resolution: {integrity: sha512-mjhxriK4yu3snnqihv7TysrnJGLFlO5A0ALicbR78mnFBi7C9yzZKntQ1YyPQcrN/8vjDApU/GPZXd55fWt41A==}
+    dev: false
+
+  /@gis-js/utilsol/1.0.1:
+    resolution: {integrity: sha512-Ep132ATYleJ0w9LZem8ZYB7MeDINKO83sV16KbE5PSUraG4Qg9r/YAflhZmveiQtWEjsjo/wxvPIJekrbQ84AQ==}
     dependencies:
+      '@gis-js/geojson2shp': 1.0.1
       '@turf/turf': 6.5.0
       dom-to-image: 2.6.0
       file-saver-es: 2.0.5
@@ -1569,16 +1576,32 @@ packages:
       shapefile: 0.6.6
     dev: false
 
-  /@gis-js/vue2ol-extend/1.0.0-alpha.27:
-    resolution: {integrity: sha512-RQk4ZOIGAyV1/QVX4HZtM2oNXV/FreDJ4BjhWacGlSxSyfqdzoAdR3QoKHhlHEetH9Mm+WWU+Y7EipaeO8ttUw==}
+  /@gis-js/utilsol/1.0.4:
+    resolution: {integrity: sha512-ImAjgEo5fzJyQvod1zCP+sw+OWyb24gXf7w+wx6XnPJzuFykbjyGyKUEtKQkZ/H+LbriobccwxPyzwThEdFtYg==}
     dependencies:
-      '@gis-js/utilsol': 1.0.0-alpha.27
-      '@gis-js/vue2ol': 1.0.0-alpha.27
+      '@gis-js/geojson2shp': 1.0.1
+      '@turf/turf': 6.5.0
+      dom-to-image: 2.6.0
+      file-saver-es: 2.0.5
+      jszip: 3.10.0
       ol: 6.14.1
+      proj4: 2.8.0
+      shapefile: 0.6.6
     dev: false
 
-  /@gis-js/vue2ol/1.0.0-alpha.27:
-    resolution: {integrity: sha512-pbqkDOuQfcLCKd6lpns2ViTpdrCQCTMWckeh2vxo7mj22SUdIEz8AMU8wA8c29XuNMXFpYL7jPebbdgFnioxgg==}
+  /@gis-js/vue2ol-extend/1.0.2:
+    resolution: {integrity: sha512-TQrlGtVD9+H4WfJgGh/Q0TnmW4Kl8O/9I/LXbBGhFAT/Ev/2tcAOcfFapMUT1XcBcWblWVHMnuEA0YLR2NZyfQ==}
+    dependencies:
+      '@gis-js/utilsol': 1.0.1
+      '@gis-js/vue2ol': 1.0.2
+      '@turf/turf': 6.5.0
+      echarts: 5.4.2
+      ol: 6.14.1
+      ol-echarts: 3.0.0_echarts@5.4.2+ol@6.14.1
+    dev: false
+
+  /@gis-js/vue2ol/1.0.2:
+    resolution: {integrity: sha512-TIv5QWP90KNTFj2cPmfcwY8jPfSzJmLsR6F395JuA8fm0Cw7mOxTupLV9nyRkUm2ZA1u5WRu5cE4tgfTT0RWGQ==}
     dependencies:
       ol: 6.14.1
     dev: false
@@ -3090,7 +3113,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.9
+      vite: 2.9.9_less@2.7.3
       vue: 3.2.36
 
   /@vitejs/plugin-vue/2.3.3_vue@3.2.36:
@@ -3863,7 +3886,6 @@ packages:
     dependencies:
       co: 4.6.0
       json-stable-stringify: 1.0.1
-    dev: false
     optional: true
 
   /ajv/6.12.6:
@@ -4024,26 +4046,22 @@ packages:
 
   /asap/2.0.6:
     resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==}
-    dev: false
     optional: true
 
   /asn1/0.2.6:
     resolution: {integrity: sha512-ix/FxPn0MDjeyJ7i/yoHGFt/EX6LyNbxSEhPPXODPL+KB0VPk86UYfL0lMdy+KCnv+fmvIzySwaK5COwqVbWTQ==}
     dependencies:
       safer-buffer: 2.1.2
-    dev: false
     optional: true
 
   /assert-plus/0.2.0:
     resolution: {integrity: sha512-u1L0ZLywRziOVjUhRxI0Qg9G+4RnFB9H/Rq40YWn0dieDgO7vAYeJz6jKAO6t/aruzlDFLAPkQTT87e+f8Imaw==}
     engines: {node: '>=0.8'}
-    dev: false
     optional: true
 
   /assert-plus/1.0.0:
     resolution: {integrity: sha512-NfJ4UzBCcQGLDlQq7nHxH+tv3kyZ0hHQqF5BO6J7tNJeP5do1llPr8dZ8zHonfhAu0PHAdMkSo+8o0wxg9lZWw==}
     engines: {node: '>=0.8'}
-    dev: false
     optional: true
 
   /async/2.6.4:
@@ -4054,7 +4072,6 @@ packages:
 
   /asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
-    dev: false
     optional: true
 
   /atob/2.1.2:
@@ -4080,12 +4097,10 @@ packages:
 
   /aws-sign2/0.6.0:
     resolution: {integrity: sha512-JnJpAS0p9RmixkOvW2XwDxxzs1bd4/VAGIl6Q0EC5YOo+p+hqIhtDhn/nmFnB/xUNXbLkpE2mOjgVIBRKD4xYw==}
-    dev: false
     optional: true
 
   /aws4/1.11.0:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
-    dev: false
     optional: true
 
   /babel-loader/8.2.5:
@@ -4157,7 +4172,6 @@ packages:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
     dependencies:
       tweetnacl: 0.14.5
-    dev: false
     optional: true
 
   /big.js/5.2.2:
@@ -4213,7 +4227,6 @@ packages:
     deprecated: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
     dependencies:
       hoek: 2.16.3
-    dev: false
     optional: true
 
   /boxen/5.1.2:
@@ -4356,7 +4369,6 @@ packages:
 
   /caseless/0.12.0:
     resolution: {integrity: sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==}
-    dev: false
     optional: true
 
   /cesium/1.94.3:
@@ -4482,7 +4494,6 @@ packages:
   /co/4.6.0:
     resolution: {integrity: sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
-    dev: false
     optional: true
 
   /color-convert/1.9.3:
@@ -4511,7 +4522,6 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
-    dev: false
     optional: true
 
   /command-line-args/5.2.1:
@@ -4794,8 +4804,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      is-text-path: 1.0.1
       JSONStream: 1.3.5
+      is-text-path: 1.0.1
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -4859,8 +4869,7 @@ packages:
     dev: false
 
   /core-util-is/1.0.2:
-    resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
-    dev: false
+    resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
     optional: true
 
   /core-util-is/1.0.3:
@@ -4924,7 +4933,6 @@ packages:
     deprecated: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
     dependencies:
       boom: 2.10.1
-    dev: false
     optional: true
 
   /css-loader/6.7.1_webpack@5.72.1:
@@ -5025,7 +5033,6 @@ packages:
     engines: {node: '>=0.10'}
     dependencies:
       assert-plus: 1.0.0
-    dev: false
     optional: true
 
   /date-fns/2.28.0:
@@ -5157,7 +5164,6 @@ packages:
   /delayed-stream/1.0.0:
     resolution: {integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=}
     engines: {node: '>=0.4.0'}
-    dev: false
     optional: true
 
   /density-clustering/1.3.0:
@@ -5296,8 +5302,14 @@ packages:
     dependencies:
       jsbn: 0.1.1
       safer-buffer: 2.1.2
-    dev: false
     optional: true
+
+  /echarts/5.4.2:
+    resolution: {integrity: sha512-2W3vw3oI2tWJdyAz+b8DuWS0nfXtSDqlDmqgin/lfzbkB01cuMEN66KWBlmur3YMp5nEDEEt5s23pllnAzB4EA==}
+    dependencies:
+      tslib: 2.3.0
+      zrender: 5.4.3
+    dev: false
 
   /ee-first/1.1.1:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
@@ -5360,7 +5372,6 @@ packages:
     requiresBuild: true
     dependencies:
       prr: 1.0.1
-    dev: false
     optional: true
 
   /error-ex/1.3.2:
@@ -6175,13 +6186,11 @@ packages:
 
   /extend/3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
-    dev: false
     optional: true
 
   /extsprintf/1.3.0:
     resolution: {integrity: sha1-lpGEQOMEGnpBT4xS48V06zw+HgU=}
     engines: {'0': node >=0.6.0}
-    dev: false
     optional: true
 
   /fast-deep-equal/3.1.3:
@@ -6331,7 +6340,6 @@ packages:
 
   /forever-agent/0.6.1:
     resolution: {integrity: sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=}
-    dev: false
     optional: true
 
   /form-data/2.1.4:
@@ -6341,7 +6349,6 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-    dev: false
     optional: true
 
   /forwarded/0.2.0:
@@ -6483,7 +6490,6 @@ packages:
     resolution: {integrity: sha1-Xv+OPmhNVprkyysSgmBOi6YhSfo=}
     dependencies:
       assert-plus: 1.0.0
-    dev: false
     optional: true
 
   /git-raw-commits/2.0.11:
@@ -6644,7 +6650,6 @@ packages:
   /har-schema/1.0.5:
     resolution: {integrity: sha1-0mMTX0MwfALGAq/I/pWXDAFRNp4=}
     engines: {node: '>=4'}
-    dev: false
     optional: true
 
   /har-validator/4.2.1:
@@ -6654,7 +6659,6 @@ packages:
     dependencies:
       ajv: 4.11.8
       har-schema: 1.0.5
-    dev: false
     optional: true
 
   /hard-rejection/2.1.0:
@@ -6707,7 +6711,6 @@ packages:
       cryptiles: 2.0.5
       hoek: 2.16.3
       sntp: 1.0.9
-    dev: false
     optional: true
 
   /he/1.2.0:
@@ -6719,7 +6722,6 @@ packages:
     resolution: {integrity: sha1-ILt0A9POo5jpHcRxCo/xuCdKJe0=}
     engines: {node: '>=0.10.40'}
     deprecated: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-    dev: false
     optional: true
 
   /hosted-git-info/2.8.9:
@@ -6849,7 +6851,6 @@ packages:
       assert-plus: 0.2.0
       jsprim: 1.4.2
       sshpk: 1.17.0
-    dev: false
     optional: true
 
   /human-signals/2.1.0:
@@ -6890,7 +6891,6 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
-    dev: false
     optional: true
 
   /immediate/3.0.6:
@@ -7115,7 +7115,6 @@ packages:
 
   /is-typedarray/1.0.0:
     resolution: {integrity: sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=}
-    dev: false
     optional: true
 
   /is-unicode-supported/0.1.0:
@@ -7136,7 +7135,7 @@ packages:
     dev: false
 
   /isarray/1.0.0:
-    resolution: {integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=}
+    resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
 
   /isexe/2.0.0:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=}
@@ -7148,7 +7147,6 @@ packages:
 
   /isstream/0.1.2:
     resolution: {integrity: sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=}
-    dev: false
     optional: true
 
   /javascript-stringify/2.1.0:
@@ -7213,7 +7211,6 @@ packages:
 
   /jsbn/0.1.1:
     resolution: {integrity: sha1-peZUwuWi3rXyAdls77yoDA7y9RM=}
-    dev: false
     optional: true
 
   /jsesc/0.5.0:
@@ -7247,7 +7244,6 @@ packages:
 
   /json-schema/0.4.0:
     resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==}
-    dev: false
     optional: true
 
   /json-stable-stringify-without-jsonify/1.0.1:
@@ -7258,7 +7254,6 @@ packages:
     resolution: {integrity: sha1-mnWdOcXy/1A/1TAGRu1EX4jE+a8=}
     dependencies:
       jsonify: 0.0.0
-    dev: false
     optional: true
 
   /json-stringify-pretty-compact/2.0.0:
@@ -7293,7 +7288,6 @@ packages:
 
   /jsonify/0.0.0:
     resolution: {integrity: sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=}
-    dev: false
     optional: true
 
   /jsonparse/1.3.1:
@@ -7309,7 +7303,6 @@ packages:
       extsprintf: 1.3.0
       json-schema: 0.4.0
       verror: 1.10.0
-    dev: false
     optional: true
 
   /jszip/3.10.0:
@@ -7365,7 +7358,6 @@ packages:
       promise: 7.3.1
       request: 2.81.0
       source-map: 0.5.7
-    dev: false
 
   /levn/0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -7651,7 +7643,6 @@ packages:
   /mime-db/1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
-    dev: false
 
   /mime-types/2.1.18:
     resolution: {integrity: sha512-lc/aahn+t4/SWV/qcmumYjymLsWfN3ELhpmVuUFjgsORruuZPVSwAQryq+HHGvO/SI2KVX26bx+En+zhM8g8hQ==}
@@ -7665,13 +7656,11 @@ packages:
     engines: {node: '>= 0.6'}
     dependencies:
       mime-db: 1.52.0
-    dev: false
 
   /mime/1.6.0:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
     engines: {node: '>=4'}
     hasBin: true
-    dev: false
 
   /mimic-fn/2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
@@ -7724,7 +7713,6 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.6
-    dev: false
 
   /mkdirp/1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
@@ -7841,7 +7829,6 @@ packages:
 
   /oauth-sign/0.8.2:
     resolution: {integrity: sha1-Rqarfwrq2N6unsBWV4C31O/rnUM=}
-    dev: false
     optional: true
 
   /object-assign/4.1.1:
@@ -7884,6 +7871,17 @@ packages:
 
   /obuf/1.1.2:
     resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
+    dev: false
+
+  /ol-echarts/3.0.0_echarts@5.4.2+ol@6.14.1:
+    resolution: {integrity: sha512-3v71ewIISwTakEpVotHc5ELEM+3Pud9pQhn8tXzLj5cZ83E1azajif0Y1WXDdYmjoiGVjWHFzwunjNSdEYEMXA==}
+    engines: {node: '>= 4.0.0', npm: '>= 3.0.0'}
+    peerDependencies:
+      echarts: '>=5.0.0'
+      ol: '>=5.0.0'
+    dependencies:
+      echarts: 5.4.2
+      ol: 6.14.1
     dev: false
 
   /ol-mapbox-style/7.1.1:
@@ -8147,7 +8145,6 @@ packages:
 
   /performance-now/0.2.0:
     resolution: {integrity: sha1-M+8wxcd9TqIcWlOGnZG1bY8lVeU=}
-    dev: false
     optional: true
 
   /picocolors/1.0.0:
@@ -8343,7 +8340,6 @@ packages:
     requiresBuild: true
     dependencies:
       asap: 2.0.6
-    dev: false
     optional: true
 
   /prompts/2.4.2:
@@ -8368,7 +8364,6 @@ packages:
 
   /prr/1.0.1:
     resolution: {integrity: sha1-0/wRS6BplaRexok/SEzrHXj19HY=}
-    dev: false
     optional: true
 
   /pump/3.0.0:
@@ -8380,7 +8375,6 @@ packages:
 
   /punycode/1.4.1:
     resolution: {integrity: sha1-wNWmOycYgArY4esPpSachN1BhF4=}
-    dev: false
 
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
@@ -8401,7 +8395,6 @@ packages:
   /qs/6.4.1:
     resolution: {integrity: sha512-LQy1Q1fcva/UsnP/6Iaa4lVeM49WiOitu2T4hZCyA/elLKu37L99qcBJk4VCCk+rdLvnMzfKyiN3SZTqdAZGSQ==}
     engines: {node: '>=0.6'}
-    dev: false
     optional: true
 
   /queue-microtask/1.2.3:
@@ -8672,7 +8665,6 @@ packages:
       tough-cookie: 2.3.4
       tunnel-agent: 0.6.0
       uuid: 3.4.0
-    dev: false
     optional: true
 
   /require-directory/2.1.1:
@@ -8777,7 +8769,6 @@ packages:
 
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
-    dev: false
 
   /sass-loader/13.0.0:
     resolution: {integrity: sha512-IHCFecI+rbPvXE2zO/mqdVFe8MU7ElGrwga9hh2H65Ru4iaBJAMRteum1c4Gsxi9Cq1FOtTEDd6+/AEYuQDM4Q==}
@@ -9082,7 +9073,6 @@ packages:
     deprecated: This module moved to @hapi/sntp. Please make sure to switch over as this distribution is no longer supported and may contain bugs and critical security issues.
     dependencies:
       hoek: 2.16.3
-    dev: false
     optional: true
 
   /sockjs/0.3.24:
@@ -9146,7 +9136,6 @@ packages:
     resolution: {integrity: sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==}
     engines: {node: '>=0.10.0'}
     requiresBuild: true
-    dev: false
     optional: true
 
   /source-map/0.6.1:
@@ -9253,7 +9242,6 @@ packages:
       jsbn: 0.1.1
       safer-buffer: 2.1.2
       tweetnacl: 0.14.5
-    dev: false
     optional: true
 
   /statuses/1.5.0:
@@ -9311,7 +9299,6 @@ packages:
 
   /stringstream/0.0.6:
     resolution: {integrity: sha512-87GEBAkegbBcweToUrdzf3eLhWNg06FJTebl4BVJz/JgWy8CvEr9dRtX5qWphiynMSQlxxi+QqN0z5T32SLlhA==}
-    dev: false
     optional: true
 
   /strip-ansi/6.0.1:
@@ -9562,7 +9549,6 @@ packages:
     engines: {node: '>=0.8'}
     dependencies:
       punycode: 1.4.1
-    dev: false
     optional: true
 
   /tr46/1.0.1:
@@ -9601,6 +9587,10 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
+  /tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+    dev: false
+
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: false
@@ -9619,7 +9609,6 @@ packages:
     resolution: {integrity: sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=}
     dependencies:
       safe-buffer: 5.2.1
-    dev: false
     optional: true
 
   /turf-jsts/1.2.3:
@@ -9628,7 +9617,6 @@ packages:
 
   /tweetnacl/0.14.5:
     resolution: {integrity: sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=}
-    dev: false
     optional: true
 
   /type-check/0.4.0:
@@ -9786,7 +9774,7 @@ packages:
     dev: false
 
   /util-deprecate/1.0.2:
-    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
   /util.inherits/1.0.3:
     resolution: {integrity: sha1-qcYmoNBtNIKdR7pWyrEnjXRfnOY=}
@@ -9835,7 +9823,6 @@ packages:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
-    dev: false
     optional: true
 
   /vite/2.9.9:
@@ -9885,7 +9872,6 @@ packages:
       rollup: 2.74.1
     optionalDependencies:
       fsevents: 2.3.2
-    dev: false
 
   /vscode-oniguruma/1.6.2:
     resolution: {integrity: sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==}
@@ -10356,3 +10342,9 @@ packages:
       y18n: 5.0.8
       yargs-parser: 21.0.1
     dev: true
+
+  /zrender/5.4.3:
+    resolution: {integrity: sha512-DRUM4ZLnoaT0PBVvGBDO9oWIDBKFdAVieNWxWwK0niYzJCMwGchRk21/hsE+RKkIveH3XHCyvXcJDkgLVvfizQ==}
+    dependencies:
+      tslib: 2.3.0
+    dev: false
