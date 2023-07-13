@@ -10,7 +10,7 @@
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
-    "@gis-js/utilsol": "^1.0.4",
+    "@gis-js/utilsol": "^1.0.5",
     "@gis-js/vue2ol": "1.0.2",
     "@gis-js/vue2ol-extend": "1.0.2",
     "@originjs/vite-plugin-commonjs": "^1.0.3",
@@ -46,6 +46,7 @@
     "rollup-plugin-polyfill-node": "^0.10.1",
     "sass-loader": "^13.0.0",
     "serve": "^13.0.2",
+    "shapefile": "^0.6.6",
     "url-loader": "^4.1.1",
     "vue": "^3.2.35",
     "vue-demi": "^0.13.11"

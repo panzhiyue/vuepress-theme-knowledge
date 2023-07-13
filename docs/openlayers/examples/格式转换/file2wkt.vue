@@ -45,44 +45,51 @@ export default {
 					var suffix = file.name.substring(file.name.lastIndexOf('.') + 1); //txt
 					let reader = new FileReader();
 					reader.onload = (evt) => {
-						let text = evt.target.result;
-						let f = null;
-						switch (suffix) {
-							case 'wkt': {
-								f = new format.WKT();
-								break;
+						try {
+							let text = evt.target.result;
+							let f = null;
+							switch (suffix) {
+								case 'wkt': {
+									f = new format.WKT();
+									break;
+								}
+								case 'geojson': {
+									f = new format.GeoJSON();
+									break;
+								}
+								case 'topojson': {
+									f = new format.TopoJSON();
+									break;
+								}
+								case 'kml': {
+									f = new format.KML();
+									break;
+								}
+								default: {
+									result.msg = `未知的文件后缀${suffix}`;
+									resolve(result);
+									return;
+								}
 							}
-							case 'geojson': {
-								f = new format.GeoJSON();
-								break;
-							}
-							case 'topojson': {
-								f = new format.TopoJSON();
-								break;
-							}
-							case 'kml': {
-								f = new format.KML();
-								break;
-							}
-							default: {
-								result.msg = `未知的文件后缀${suffix}`;
+
+							let features = f.readFeatures(text);
+
+							let err = this.checkFeatures(features);
+							if (err) {
+								result.msg = err;
 								resolve(result);
 								return;
 							}
-						}
-						let features = f.readFeatures(text);
-						let err = this.checkFeatures(features);
-						if (err) {
-							result.msg = err;
+							let feature = features[0];
+							let wkt = new format.WKT().writeGeometry(feature.getGeometry());
+							result.msg = wkt;
+							result.success = true;
 							resolve(result);
 							return;
+						} catch (err) {
+							result.msg = err;
+							resolve(result);
 						}
-						let feature = features[0];
-						let wkt = new format.WKT().writeGeometry(feature.getGeometry());
-						result.msg = wkt;
-						result.success = true;
-						resolve(result);
-						return;
 					};
 					reader.readAsText(file);
 				} else {
@@ -108,17 +115,17 @@ export default {
 					}
 					let shpFileName = shpFileNames[0];
 					if (!fileNames.includes(shpFileName + '.prj')) {
-						result.msg = `缺少文件${shpFileName + '.prj'}`;
+						result.msg = `缺少文件${shpFileName + '.prj'}(shp格式必须包含.shp、.prj、.dbf、.shx文件)`;
 						resolve(result);
 						return;
 					}
 					if (!fileNames.includes(shpFileName + '.dbf')) {
-						result.msg = `缺少文件${shpFileName + '.dbf'}`;
+						result.msg = `缺少文件${shpFileName + '.dbf'}(shp格式必须包含.shp、.prj、.dbf、.shx文件)`;
 						resolve(result);
 						return;
 					}
 					if (!fileNames.includes(shpFileName + '.shx')) {
-						result.msg = `缺少文件${shpFileName + '.shx'}`;
+						result.msg = `缺少文件${shpFileName + '.shx'}(shp格式必须包含.shp、.prj、.dbf、.shx文件)`;
 						resolve(result);
 						return;
 					}
@@ -127,27 +134,38 @@ export default {
 					var eShapeFile = new utilsol.EShapeFile({
 						projection: proj.get('EPSG:4326'),
 					});
+
 					eShapeFile.on('loaded', () => {
-						var features = eShapeFile.getFeatures();
-						let err = this.checkFeatures(features);
-						if (err) {
-							result.msg = err;
+						try {
+							var features = eShapeFile.getFeatures();
+							let err = this.checkFeatures(features);
+							if (err) {
+								result.msg = err;
+								resolve(result);
+								return;
+							}
+							let feature = features[0];
+							let wkt = new format.WKT().writeGeometry(feature.getGeometry());
+							result.msg = wkt;
+							result.success = true;
 							resolve(result);
 							return;
+						} catch (err) {
+							result.msg = err;
+							resolve(result);
 						}
-						let feature = features[0];
-						let wkt = new format.WKT().writeGeometry(feature.getGeometry());
-						result.msg = wkt;
-						result.success = true;
-						resolve(result);
-						return;
 					});
 					eShapeFile.on('error', (error) => {
 						result.msg = error.message;
 						resolve(result);
 						return;
 					});
-					eShapeFile.readFile(files);
+					try {
+						eShapeFile.readFile(files);
+					} catch (err) {
+						result.msg = err;
+						resolve(result);
+					}
 				}
 			});
 		},
