@@ -4,7 +4,7 @@
 
 ```javascript
 style: new Style({
-  image: new Cirlce({
+  image: new Circle({
     radius: 2, //圆半径
     fill: new Fill({
       color: "blue",

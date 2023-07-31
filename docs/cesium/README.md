@@ -508,6 +508,44 @@ var tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
 }));
 ```
 
+
+
+### 11.获取相机信息
+
+```javascript
+      window.printCamera = () => {
+        //获取相机高度
+        let height = Math.ceil(
+          this.viewer.camera.positionCartographic.height
+        ).toFixed(2);
+
+        let lon = Cesium.Math.toDegrees(
+          this.viewer.camera.positionCartographic.longitude
+        );
+        let lat = Cesium.Math.toDegrees(
+          this.viewer.camera.positionCartographic.latitude
+        );
+
+        //方向
+        let heading = Cesium.Math.toDegrees(this.viewer.camera.heading).toFixed(
+          2
+        );
+        //俯仰角
+        let pitch = Cesium.Math.toDegrees(this.viewer.camera.pitch).toFixed(2);
+        let roll = Cesium.Math.toDegrees(this.viewer.camera.roll).toFixed(2);
+        console.log({
+          lon,
+          lat,
+          height,
+          heading,
+          pitch,
+          roll,
+        });
+      };
+```
+
+
+
 ## 参考手册
 
 ### Math
